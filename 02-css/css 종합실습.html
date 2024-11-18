@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합실습2</title>
+    <style>
+        #check2 {
+            display: none;
+        }
+        #check2 + label{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+        }
+        #check2:checked + label::after{
+            content: "*";
+            background-color: yellow;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="check1">
+          <label for="check1"></label>
+        <input type="checkbox" id="check2">
+          <label for="check2"></label>
+        <input type="checkbox" id="check3">
+          <label for="check3"></label>
+        <input type="checkbox" id="check4">
+          <label for="check4"></label>
+    </div>
+</body>
+</html>
