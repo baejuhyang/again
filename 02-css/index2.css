@@ -1,23 +1,17 @@
-/* 
-    * : 전체 선택자
-*/
-/* * {
-  color: red;
-} */
-/* 
-    태그명 : 태그 선택자
-*/
-h1 {
-    background-color: pink;
+/* * : 전체 선택자 */
+  * {
+    color: grey;
   }
+/* 태그명 : 태그 선택자 */
+  h1 {
+      background-color: pink;
+    }
   
   /* p {
     background-color: violet;
   } */
   
-  /* 
-      .클래스명 : 클래스 선택자
-  */
+/* .클래스명 : 클래스 선택자 */
   .second {
     background-color: aqua;
   }
@@ -34,18 +28,17 @@ h1 {
     color: blue;
   }
   
-  /* 
-      #아이디명 : 아이디 선택자
-  */
+/* #아이디명 : 아이디 선택자 */
   #first {
     background-color: lightgreen;
   }
-  
-  /* 
-      id, class 차이.
-      - class : 그룹
-      - id : 고유
-  */
+
+/* 
+    id, class 차이.
+    - class : 그룹
+    - id : 고유
+*/
+
   .hello {
     color: green;
   }
@@ -60,4 +53,4 @@ h1 {
   
   #one {
     color: blueviolet;
-  }
+  }   /* 한 요소가 여러 개의 id를 사용하여 적용되지 않음 */
