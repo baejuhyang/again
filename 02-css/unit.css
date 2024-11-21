@@ -88,13 +88,13 @@ html {
     - 변수 이름 : --로 시작
 
     * 사용법
-    -"var(변수명)" --> var() 함수 사용.
+    - "var(변수명)" --> var() 함수 사용.
 */
 
 :root {
     /* 
         전역 변수: html의 상위, 그 페이지 내의 모든 요소에 적용됨
-        - root, html, *, body ...
+        -  body, html, * , :root 
     */
 
     /* --size: 8px;  변수임 -> 사용자가 임의로 변수 이름을 지정할 수 있음 */
@@ -107,11 +107,11 @@ html {
 .btn {
     /* 지역 변수 */
     --size: 8px;
-    color: var(--color-white) /* --color-white의 색은 흰색으로 설정되어서 흰색으로 적용됨 */
+    color: var(--color-white) /* --color-white는 전역 변수 */
     border: none;
     border-radius; 4px;
     font-weight: bold;
-    padding: var(--size);
+    padding: var(--size); /* --size는 지역 변수 */
     width: 100px;
 }
 

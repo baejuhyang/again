@@ -1,3 +1,4 @@
+/* inline */
 .d-inline1 {
     display: inline;
     background-color: lightblue;
@@ -8,6 +9,7 @@
     background-color: lightcoral;
   }
   
+  /* block */
   .d-block1 {
     display: block;
     background-color: lightblue;
@@ -20,9 +22,10 @@
     height: 200px;
   }
   
+  /* inline-block */
   .d-inline-block1 {
     display: inline-block;
-    background-color: blue;
+    background-color: skyblue;
   }
   
   .d-inline-block2 {
