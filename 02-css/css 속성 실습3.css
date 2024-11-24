@@ -52,63 +52,56 @@
 /* #4 */
 .container {
     height: 50vh;
-    background-color: transparent;
 }
 
 .item {
-    width: 100px;
-    height: 100px;
+    width: 8vh;
+    height: 8vh;
     background-color: #ffffff;
 
-    margin: 10px;
-    box-sizing: border-box;
+    margin: 0.8vh;
 }
 
 .flex1 {
+    height: 10vh;
     background-color: #477A91;
 
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; 
 }
 
 .flex2 {
-    height: 30vh;
     background-color: #A9CDD4;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: stretch; 기본값이다.*/
 }
 
 .flex2-1 {
-    height: 25vh;
-    margin: 10px 58px;
+    margin: 0.8vh 0;
     background-color: #E1EBF0;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: stretch;
+    /* align-items: stretch; 기본값이다.*/
 }
 
 .fl2-1 {
-    height: 25vh;
+    height: auto;
+    /* align-self: auto; 기본값으로 container의 align-items 속성(stretch)을 상속받음*/
 }
 
 .flex2-2 {
-    height: 25vh;
-    margin: 10px 58px;
+    margin: 0.8vh 0;
     background-color: #E1EBF0;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .flex2-3 {
-    height: 25vh;
-    margin: 10px 58px;
+    margin: 0.8vh 0;
     background-color: #E1EBF0;
 
     display: flex;
@@ -117,30 +110,29 @@
 }
 
 .flex2-4 {
-    height: 25vh;
-    margin: 10px 58px;
+    margin: 0.8vh 0;
     background-color: #E1EBF0;
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .flex3 {
+    height: 10vh;
     background-color: #477A91;
 
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
 .fl3-1 {
-    flex-grow: 3;
+    flex-grow: 1;
 }
 
 .fl3-2 {
-    flex-grow: 5;
+    flex-grow: 2;
 }
 
 .fl3-3 {
-    flex-grow: 7;
+    flex-grow: 3;
 }
