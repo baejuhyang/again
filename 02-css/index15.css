@@ -1,0 +1,124 @@
+/* 
+    Animation
+    - animation-name: @keyframes 애니메애션 이름 지정.
+        - 시작: from or 0%
+        - 중간: 0 ~ 100%
+        - 끝: to or 100%
+
+    - animation-duration: 애니메이션이 한 번 재생되는 데 걸리는 시간 지정. 단위: s
+    - aminmation-delay: 애니메이션이 시작되기 전에 기다리는 시간을 지정. 단위: s
+    - animation-interation-count: 애니메이션 반복 횟수. 기본값은 1, infinite 무한 반복)
+    - animation-timing-function: 애니메이션의 속도 변화를 지정.
+        - linear, ease, ease-in, ease-out, ease-in-out 등등.
+    - animation-direction: 애니메이션의 방향을 지정.
+        - normal(=기본값), reverse(반대방향), alternate(반복될때마다 방향을 바꿔줌), alternate-reverse
+        - alternate: frome -> to 방향으로 애니메이션 진행 -> 다음 회자에는 to->from 방향으로 바꿔가며 반복.
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+
+    animation-name: jj;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* jj: 애니메이션의 이름 (개발자 마음대로, 어울리는 이름으로 지어줘야 유지보수가 좋음) */
+@keyframes jj {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 250px;
+    }
+    50% {
+        left: 400px;
+    }
+    75% {
+        left: 200px;
+    }
+    100% {
+        left: 0px;
+    }
+
+}
+
+/* ex2 */
+.bounce-ball1 {
+    position: relative;
+    left: 100px;
+    top: 0px;
+
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    border-radius: 50%;
+
+    /* animation-name: bounce1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+
+    /* 애니메이션 단축 속성 */
+    animation: bounce1 1s ease-out  infinite alternate;
+}
+
+@keyframes bounce1 {
+    to {
+        top: 50px;
+    }
+
+    from{
+        top: 300px;
+    }
+}
+
+.bounce-ball2 {
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    border-radius: 50%;
+
+    position: absolute;
+
+    animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+    /* from과 to의 내용이 같다면 ,로 같이 묶어줄 수 있다. */
+    from, to {
+        bottom: 0px;
+        animation-timing-function: ease-out;
+        /* opx에서 정상속도로 시작하다 -> 속도를 줄이면서 300px이 된다. */
+    }
+
+    50% {
+        bottom: 300px;
+        animation-timing-function: ease-in;
+        /* 300px에서 천천히 시작하다 -> 0px로 가면서 정상속도 */
+    }
+
+    /* to {
+        bottom: 0px;
+        animation-timing-function: ease-out;
+    } */
+}
+
+/* 
+    Tip)
+    * from에서 to로의 애니메이션 (정방향 애니메이션): from ~ to
+    - from은 애니메이션의 시작 상태를 나타낸다.
+    - to는 애니메이션의 종료 상태를 나타낸다.
+    이런 경우 애니메이션은 from 상태에서 시작하여 to 상태로 종료한다.
+
+    * to에서 from으로의 애니메이션 (역방향 애니메이션): to ~ from
+    - to는 애니메이션의 시작 상태를 나타낸다.
+    - from은 애니메이션의 종료 상태를 나타낸다.
+    이러한 경우는 to 상태에서 시작하여 from 상태로 종료한다.
+*/
