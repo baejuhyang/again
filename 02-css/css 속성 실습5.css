@@ -1,164 +1,80 @@
-/* 공 */
-/* * {
-    margin: 0px;
+/* transition, trasform 실습 1번 */
+/* .outer {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(174, 192, 207);
+    position: relative;
 }
-.ball {
+
+.box {
+    width: 300px;
+    height: 200px;
+    background-image: url(./image/night.jpg);
+    background-size: cover;
+    transform: skew(0, 30deg);
+    transition: transform 1s;
+
+    position: absolute;
+}
+
+.box:hover {
+    transform: skew(0);
+    z-index: 3;
+}
+
+.box1 {
+    left: 25%;
+    top: 50%;
+    z-index: 2;
+}
+
+.box2 {
+    left: 35%;
+    top: 40%;
+    z-index: 1;
+}
+
+.box3 {
+    left: 45%;
+    top: 30%;
+} */
+
+/* transition, trasform 실습 2번 */
+
+div {
     width: 100px;
     height: 100px;
-    background: linear-gradient(orange, 70%, yellow);
-    border-radius: 50%;
+    background-color: skyblue;
+    border: 1px solid black;
     box-sizing: border-box;
-    position: relative;
 
-    animation: moving 7s infinite;
+    margin-left: 50px;
+    cursor: pointer;
+
+    transition: 1s;
 }
 
-@keyframes moving {
-    0%, 100% {
-        top: 0px;
-        left: 0px;
-    }
-    25% {
-        top: 0px;
-        left: calc(100vw - 100px);
-    }
-    50% {
-        top: calc(100vh - 100px);
-        left: calc(100vw - 100px);
-    }
-    75% {
-        top: calc(100vh - 100px);
-        left: 0px;
-    }
-} */
-
-/* 글자 움직이기 */
-/* .text {
-    position: relative;
-    left: 100%;
-
-    width: 200%;
-    animation: showing 4s infinite;
+.no1:hover {
+    width: 200px;
+    /* transform: translateX(50px) scaleX(2); */
 }
 
-@keyframes showing {
-    100% {
-        left: 0%;
-        width: 100%;
-    }
-} */
-
-/* 미디어 쿼리 사용 */
-/* @media (min-width: 501px) {
-    body {
-        background-color: skyblue
-    } 
+.no2:hover {
+    transform: skewX(-45deg) translateX(50%);
 }
 
-@media (max-width: 300px) {
-    body {
-        background-color: orange
-    } 
+.no3:hover {
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(300px) rotate(180deg);
+    /* 순서가 달라지면 된다. */
 }
 
-@media (max-height: 300px) {
-    p {
-        font-size: 10px;
-    }
+.no4:hover {
+    background-color: yellow;
+    transform: rotateY(360deg) scale(1.5);
 }
 
-@media (min-height: 501px) {
-    body {
-        background-color: green;
-    } 
-} */
-
-/* media query 실습1 */
-/* div {
-    width: 100px;
-    height: 100px;
-    border: 0.5px solid red;
-    border-radius: 10%;
-    margin: 10px;
-}
-@media (min-width: 701px) {
-    body {
-        display: flex;
-    }
-    div {
-        background-color: black;
-    }
-}
-
-@media (max-width: 700px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    div {
-        background-color: skyblue
-    }
-} */
-
-/* media query 실습2 */
-* {
-    margin: 0;
-}
-
-header {
-    background-color: rgb(79, 75, 75);
-    display: flex;
-    justify-content: space-evenly; 
-}
-
-.menu {
-    background-color: rgb(79, 75, 75);
-    height: 40px;
-
-    /* 텍스트 중양정렬 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    color: white;
-    padding: 2px;
-}
-
-.text:hover {
-    background-color: grey;
-    border-radius: 10%;
-}
-
-label {
-    display: none;
-}
-
-input  {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    label {
-        display: inline;
-
-        height: 40px;
-        padding: 10px;
-        color: white;
-        font-size: 20px;
-        line-height: 33px;
-        
-        
-        
-        border-bottom: 1px solid white;
-    }
-
-   #menu:checked + label ~ .menu {
-        display: none;
-    }
+.no4 {
+    transition: 1s ease;
 }
