@@ -17,7 +17,8 @@
 }
 
 @keyframes moving {
-    0%, 100% {
+    0%,
+    100% {
         top: 0;
         left: 0;
 
@@ -115,62 +116,73 @@ div {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+nav {
     background-color: rgb(79, 75, 75);
-    display: flex;
-    justify-content: space-evenly; 
+    position: relative;
 }
 
-.menu {
-    background-color: rgb(79, 75, 75);
-    height: 40px;
-
-    /* 텍스트 중양정렬 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    color: white;
-    padding: 2px;
-}
-
-.text:hover {
-    background-color: grey;
-    border-radius: 10%;
+input {
+    display: none;
 }
 
 label {
     display: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
-input  {
-    display: none;
+.line {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu li {
+    height: 49px;
+    /* margin: 10px 0; */
+    /* 텍스트 중앙정렬 */
+    text-align: center;
+    line-height: 49px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: grey;
+    border-radius: 5px;
+}
+
+/* 모바일에서 햄버거 메뉴 활성화 */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
     label {
-        display: inline;
-
-        height: 40px;
-        padding: 10px;
-        color: white;
-        font-size: 20px;
-        line-height: 33px;
-        
-        
-        
-        border-bottom: 1px solid white;
+        display: block;
     }
 
-   #menu:checked + label ~ .menu {
+    .menu {
         display: none;
+    }
+
+    #hamburger:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        background-color: rgb(79, 75, 75);
+        width: 100%;
     }
 }

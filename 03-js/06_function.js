@@ -8,7 +8,7 @@
 // - body: 함수 내부 코드 (Scope라고도 함.)
 
 // 용어 정리
-// - 함수 정의(선언): 함수를 "성성"
+// - 함수 정의(선언): 함수를 "생성"
 // - 함수 호출: 함수를 "사용"
 
 // 함수 선언 방식
@@ -142,6 +142,6 @@ function sayHello5() {
 // - 호이스팅의 대상이 될 수 없음.
 // - Why?
 // - 변수에 함수가 할당되기 때문에 그 이후에만 호출 가능!
-// sayhello6(); // ReferenceError!
-const sayhello6 = () => console.log('hello2~~!');
-sayhello6();
+// sayHello6(); // ReferenceError!
+const sayHello6 = () => console.log('hello2~~!');
+sayHello6();
