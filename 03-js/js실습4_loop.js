@@ -1,4 +1,4 @@
-// 실습무제1 - 배수 찾기
+// 실습문제1 - 배수 찾기
 // 방법1)
 // for (let i = 1; i <= 10000; i++) {
 //     if (i % 13 === 0 && i % 2 === 1) {
@@ -36,17 +36,17 @@
 // }
 
 // 방법2) while문 사용
-let i = 1;
-let j = 1;
-while (i <= 9) {
-    console.log(`---${i} 단---`);
-    while (j <= 9) {
-        console.log(`${i} x ${j} = ${i * j}`);
-        j++;
-    }
-    i++;
-    j = 1;
-}
+// let i = 1;
+// let j = 1;
+// while (i <= 9) {
+//     console.log(`---${i} 단---`);
+//     while (j <= 9) {
+//         console.log(`${i} x ${j} = ${i * j}`);
+//         j++;
+//     }
+//     i++;
+//     j = 1;
+// }
 
 // 실습문제3 - 배수의 합
 // let sum = 0;
@@ -56,3 +56,24 @@ while (i <= 9) {
 //     }
 // }
 // console.log(sum);
+
+// 실습문제4 - for문을 활용한 별 찍기
+// n = 5
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+// prompt를 사용해서 높이를 입력 받기. -  10진수의 정수 int형으로 형변환 할 것.
+
+const n = parseInt(prompt('높이를 입력하세요'), 10);
+for (let i = 1; i <= n; i++) {
+    let star = '';
+    for (let j = i; j < n; j++) {
+        star += ' ';
+    }
+    for (let k = 1; k <= i; k++) {
+        star += '*';
+    }
+    console.log(star);
+}
