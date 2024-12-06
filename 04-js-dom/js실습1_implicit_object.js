@@ -1,6 +1,7 @@
 // 내장 객체 실습문제1 -주말과 평일
 let day = new Date();
 day = day.getDay();
+
 // if 사용
 if (day === 0 || day === 6) {
     console.log('오늘은 주말');

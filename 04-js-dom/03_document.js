@@ -1,11 +1,13 @@
-console.log(document);
-console.log(document.childNodes); // NodeList(2) [<!DOCTYPE html>, html] // 배열 형식을 가져옴. index값도 가짐.
+console.log(document); // #document (http://127.0.0.1:5501/04-js-dom/03 d~.html)
+console.log(document.childNodes); // NodeList(2) [<!DOCTYPE html>, html]
+// 배열 형식을 가져옴. index값도 가짐.
 // 키와 값의 쌍으로 이루어진 객체임.
-console.log(document.childNodes[1]); // index로 head 태그 접근
-console.log(document.childNodes[1].childNodes); // html의 자식요소
+
+console.log(document.childNodes[1]); // index로 html 태그 접근
+console.log(document.childNodes[1].childNodes); // [head, text, body]
+// html의 자식요소
+// text: head와 body사이 text를 입력할 공간
 console.log(document.childNodes[1].childNodes[2]); // index로 body 태그 접근
-//  script 태그 뒤에 defer라는 속성을 붙여주면 script 태그의 뒤에까지 읽힌다.
-//[head, text, body] - > head와 body사이 text를 입력할 공간이 있다..?
 console.log(document.childNodes[1].childNodes[2].childNodes);
 // => 이렇게 접근하면 너무 불편하니까. 이렇게 하지 않기 위해 속성과 메서드 사용.
 
@@ -30,7 +32,7 @@ console.log(document.getElementById('red'));
 
 // 2. getElementsByClassName // HTMLCollection
 console.log(document.getElementsByClassName('pink')); // HTMLCollection(4) [div.pink, div.pink, div.pink, div.pink]
-console.log('여기', document.getElementsByClassName('pink')[2]); // HTMLCollection(4) [div.pink, div.pink, div.pink, div.pink]
+console.log(document.getElementsByClassName('pink')[2]);
 console.log(document.getElementsByClassName('others')); // HTMLCollection(2) [div#green.others, div#red.others, green: div#green.others, red: div#red.others]
 
 // 2. getElementsByTagName // HTMLCollection
@@ -80,9 +82,9 @@ console.log(document.querySelectorAll('div')[4]); // index로 접근
 
 // #1. HTMLCOllection
 // - HTML 문서에서 특정 조건에 맞는 요소들을 실시간으로 컬렉션 형태로 반환.
-// - 실시간: 문서 내용이 변경되면 HTMLCollection도 즉시 업데이트.HTMLCollection도
-// - HTml
-// - 배열은 아님
+// - 실시간: 문서 내용이 변경되면 HTMLCollection도 즉시 업데이트.
+// - HTML 요소 전용: 컬렉션에 포함된 항목은 항상 HTML 요소.
+// - 배열은 아님! : 배열처럼 인덱스로 접근 가능하나, 배열 메서드 (forEach, map 등) 사용 불가!
 
 // 단일로 가져오는 것은 해당이 안됨. (유사배열이기 때문에 복수형태를 갖고있어야 함.)
 // 반복문으로 돌리고 싶을 시
@@ -140,21 +142,10 @@ console.log(range); // (5) [1, 2, 3, 4, 5]
 
 // 4) HTMLCollection을 배열로 변환. -> .forEach 매서드 사용 가능
 const htmlcollection = document.getElementsByTagName('div');
-const array2 = Array.from(htmlcollection); // 배열로 변환
-console.log(array2); // (6) [div.pink, div.pink, div.pink, div.pink, div#green.others, div#red.others]
+// const array2 = Array.from(htmlcollection); // 배열로 변환
+// console.log(array2); // (6) [div.pink, div.pink, div.pink, div.pink, div#green.others, div#red.others]
 
-array2.forEach((elem) => console.log(elem)); // forEach() 사용
-
-// for of??
-// const divs = document.getElementsByTagName('div');
-// for (let elem of divs) {
-//     console.log(divs[elem]);
-// }
-
-// for in???
-// for (let elem in document.getElementsByTagName('div')) {
-//     console.log(document.getElementsByTagName('div')[elem]);
-// }
+// array2.forEach((elem) => console.log(elem)); // forEach() 사용
 
 // #2. NodeList
 // - DOM에서 노드의 그룹을 반환. (텍스트 노드, 주석 노드 포함)
@@ -170,11 +161,6 @@ console.log(pinks); // NodeList(4) [div.pink, div.pink, div.pink, div.pink]
 
 for (let pink of pinks) {
     console.log(pink);
-}
-
-// // for...in??? 보이지 않는 것도 순환함
-for (let pink in pinks) {
-    console.log(pinks[pink]);
 }
 
 // 모든 요소는 모든 노드가 되지만, 모든 노드가 모든 요소는 아니다.

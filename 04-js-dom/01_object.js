@@ -74,3 +74,12 @@ console.log(`obj: ${JSON.stringify(obj)}, obj2: ${JSON.stringify(obj2)}`);
 // obj: {"one":1,"two":2,"five":5}, obj2: {"one":1,"two":2,"five":5}
 // 문자열로 표현되었다.
 // 객체만 따로 호출하고 싶다면 (객체의 형태로) console.log(obj3)의 형태로 사용해야 한다.
+
+const me = {
+    name: 'John',
+    birth: '0707',
+};
+
+me['gender'] = 'F'; // 대괄호 표기법([]) 사용
+me.age = 30; // 점 표기법(.) 사용
+console.log(me); // {name: 'John', birth: '0707', gender: 'F', age: 30}
