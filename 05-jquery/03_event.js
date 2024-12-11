@@ -81,7 +81,7 @@ $('.num').on('click', function () {
 //     color -> 자유롭게 색상 변경.
 //     각각의 요소에 접근하기 위해선 "반복문" 사용!
 const nums = document.querySelectorAll('.num');
-console.log('nums >>> ', nums); // [li.num, li.num, li.num, li.num]
+// console.log('nums >>> ', nums); // [li.num, li.num, li.num, li.num]
 
 for (let num of nums) {
     console.log('num >>> ', num);
@@ -169,8 +169,54 @@ $('#todo-form').on('submit', function (e) {
 });
 
 // e.preventDefault() 또 다른 예제
-$('a #inactive').on('click', function (e)){
+$('a#inactive').on('click', function (e) {
     e.preventDefault(); // a 태그의 기본 동작을 막음.
+    // a 태그의 클릭 이벤트에 대해서 기본 동작은
+    // href 에 연결되어 있는 링크로의 이동.
+    $('#text').append('이 링크는 동작하지 않음!');
+});
+
+// this
+// 실행된 함수가 속해 있던 객체를 참조.
+// "뭔가"를 클릭할 때 불러오는 함수 (=콜백함수)에서 this는 그 "뭔가"를 의미.
+const btns = document.querySelectorAll('.btn');
+const spans = document.querySelectorAll('.span');
+console.log(btns); // NodeList(5) [button.btn.btn1, button.btn.btn2, button.btn.btn3, button.btn.btn4, button.btn.btn5]
+
+function setBgColor() {
+    this.style.backgroundColor = 'royalblue';
 }
 
-for 
+function setBgColor2(elem, color) {
+    elem.style.backgroundColor = color;
+}
+
+for (let btn of btns) {
+    // 1. 익명 함수로 이벤트 핸들러 정의 (this 사용)
+    // btn.addEventListener('click', function () {
+    //     console.log(this); // 클릭된 버튼을 말함.
+    //     this.style.backgroundColor = 'royalblue';
+    // });
+    // 2. 함수 참조를 통한 이벤트 핸들러 정의
+    // - setBgColor 함수가 호출 될 때, 이벤트가 발생한 DOM 요소가 'this'
+    // btn.addEventListener('click', setBgColor);
+    // 3. 익명 함수에서 또 다른 함수 호출.
+    // btn.addEventListener('click', function () {
+    //     setBgColor2(this, 'purple');
+    // });
+}
+
+// for (let span of spans) {
+//     // 1.
+//     span.addEventListener('click', function () {
+//         this.style.backgroundColor = 'lightgreen';
+//     });
+
+//     // 2.
+//     span.addEventListener('click', setBgColor);
+
+//     // 3.
+//     span.addEventListener('click', function () {
+//         setBgColor2(this, 'green');
+//     });
+// }
