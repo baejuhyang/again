@@ -28,6 +28,13 @@
 //     i.classList.add('todo');
 // }
 
+// toggle 사용
+// const lis = document.querySelectorAll('li');
+// for (let li of lis) {
+//     li.classList.toggle('done');
+//     li.classList.toggle('todo');
+// }
+
 // 요소 선택 및 다루기 실습 - 아이스크림 베스트9
 const section = document.querySelector('section');
 
@@ -60,7 +67,7 @@ for (let i = 0; i < icecreams.length; i++) {
     image.setAttribute('src', '../02-css/image/Donut.jpg');
     image.classList.add('img-box');
 
-    h3.innerHTML = 'Top ' + (i + 1);
+    h3.innerHTML = 'Top ' + (i + 1); // `Top${i+1}`
     h3.classList.add('text-center');
 
     divArray.innerHTML = icecreams[i];

@@ -32,18 +32,17 @@
             <button>Create</button>
         </div>
         <script>
-            const body = document.querySelector('body');
             const btn = document.querySelector('button');
             const h2 = document.querySelector('h2');
 
             btn.addEventListener('click', change);
             function change() {
-                const num1 = Math.floor(Math.random() * 251);
-                const num2 = Math.floor(Math.random() * 251);
-                const num3 = Math.floor(Math.random() * 251);
-                console.log(num1, num2, num3);
-                body.style.backgroundColor = `rgb(${num1}, ${num2}, ${num3})`;
-                h2.innerHTML = 'rgb(' + num1 + ', ' + num2 + ', ' + num3 + ')';
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                const newColor = `rgb(${r}, ${g}, ${b})`;
+                document.body.style.backgroundColor = newColor;
+                h2.innerText = newColor;
             }
         </script> -->
 
@@ -59,11 +58,12 @@
         <ul class="comment-list"></ul>
 
         <script>
-            const commentForm = document.querySelector('form');
-            const ulTag = document.querySelector('ul');
+            const form = document.querySelector('form');
+            const list = document.querySelector('.comment-list');
 
-            commentForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+            // form 요소의 button을 클릭하여 폼을 "제출"했을 때,
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // 폼이 제출되고 새로고침 되는 것을 막음
 
                 const userid = document.querySelector('input[name="userid"]');
                 const comment = document.querySelector('input[name="comment"]');
@@ -71,12 +71,9 @@
                 const newUserid = userid.value;
                 const newComment = comment.value;
 
-                if (newUserid !== '' && newComment !== '') {
-                    const newList = document.createElement('li'); // <li></li>
-                    newList.append(`${newUserid} - ${newComment}`); // <li>input 입력 값</li>
-                    ulTag.append(newList);
-                } else {
-                }
+                const newList = document.createElement('li'); // <li></li>
+                newList.append(`${newUserid} - ${newComment}`); // <li>input 입력 값</li>
+                list.append(newList);
 
                 // input 창 초기화
                 userid.value = '';
