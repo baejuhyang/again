@@ -1,0 +1,143 @@
+/* #1 */
+/* .container {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+} */
+
+/* #2 */
+/* .container {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+} */
+
+/* #3 */
+/* .container {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+} */
+
+/* #4 */
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: #ffffff;
+
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex1 {
+    background-color: #477A91;
+    padding: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center;  */
+}
+
+
+.flex2 {
+    background-color: #A9CDD4;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex2-1 {
+    /* margin: 0.8vh 0; */
+    background-color: #E1EBF0;
+
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: stretch; 기본값임 */
+}
+.fl2-1 {
+    height: auto;
+    /* width: auto; */
+    /* flex-grow: 1; */
+}
+
+
+.flex2-2 {
+    /* margin: 0.8vh 0; */
+    /* background-color: #E1EBF0; */
+
+    display: flex;
+    align-items: center;
+}
+
+.flex2-3 {
+    /* margin: 0.8vh 0; */
+    /* background-color: #E1EBF0; */
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: space-evenly; */
+}
+
+.flex2-4 {
+    /* margin: 0.8vh 0; */
+    /* background-color: #E1EBF0; */
+
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.flex3 {
+    background-color: #477A91;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+}
+.fl3-1 {
+    flex-grow: 1;
+}
+
+.fl3-2 {
+    flex-grow: 2;
+}
+
+.fl3-3 {
+    flex-grow: 3;
+}

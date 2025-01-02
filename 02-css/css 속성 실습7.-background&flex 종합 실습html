@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overwatch 캐릭터 선택창 만들기</title>
+    <link rel="stylesheet" href="css 속성 실습7.css">
+  </head>
+
+  <body>
+    <!-- 전체를 감싸는 콘테이너 -->
+    <div class="container">
+        <!-- heroes는 캐릭터 선택창 전체를 감싸게 됨 -->
+      <div class="heroes">
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+      </div>
+      <!-- <div class="logo">
+        <img 
+            src="https://w7.pngwing.com/pngs/858/777/png-transparent-overwatch-blizzcon-video-game-logo-dallas-fuel-others-miscellaneous-game-text.png"
+            alt="overwatch logo" 
+        /> -->
+      </div>
+    </div>
+  </body>
+</html>

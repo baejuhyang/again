@@ -1,0 +1,80 @@
+/* transition, trasform 실습 1번 */
+/* .outer {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(174, 192, 207);
+    position: relative;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    background-image: url(./image/night.jpg);
+    background-size: cover;
+    transform: skew(0, 30deg);
+    transition: transform 1s;
+
+    position: absolute;
+}
+
+.box:hover {
+    transform: skew(0);
+    z-index: 3;
+}
+
+.box1 {
+    left: 25%;
+    top: 50%;
+    z-index: 2;
+}
+
+.box2 {
+    left: 35%;
+    top: 40%;
+    z-index: 1;
+}
+
+.box3 {
+    left: 45%;
+    top: 30%;
+} */
+
+/* transition, trasform 실습 2번 */
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+    margin-left: 50px;
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+.no1:hover {
+    width: 200px;
+    /* transform: translateX(50px) scaleX(2); */
+}
+
+.no2:hover {
+    transform: skewX(-45deg) translateX(50%);
+}
+
+.no3:hover {
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(300px) rotate(180deg);
+    /* 순서가 달라지면 된다. */
+}
+
+.no4:hover {
+    background-color: yellow;
+    transform: rotateY(360deg) scale(1.5);
+}
+
+.no4 {
+    transition: 1s ease;
+}

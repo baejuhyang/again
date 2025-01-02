@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <!-- TODO1: jQuery CDN 불러오기 -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+            }
+
+            div:hover {
+                cursor: pointer;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .orange {
+                background-color: orange;
+            }
+
+            .yellow {
+                background-color: yellow;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            .purple {
+                background-color: purple;
+            }
+        </style>
+
+        <script>
+            let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+            // TODO2: changeColor 함수 내부 작성
+
+            // let i = 1;
+            // function changeColor() {
+            //     if (i < colors.length) {
+            //         $('div')
+            //             .removeClass(colors[i - 1])
+            //             .addClass(colors[i]);
+            //         i++;
+            //     } else {
+            //         $('div')
+            //             .removeClass(colors[i - 1])
+            //             .addClass(colors[0]);
+            //         i = 1;
+            //     }
+            // }
+
+            // 다시해보기
+            let currentIndex = 0;
+            function changeColor() {
+                nextIndex = currentIndex + 1;
+
+                console.log(currentIndex, nextIndex);
+
+                $('div')
+                    .removeClass(colors[currentIndex])
+                    .addClass(colors[nextIndex]);
+                if (currentIndex > colors.length) {
+                    currentIndex = 0;
+                }
+                currentIndex++;
+            }
+
+            // function changeColor() {
+            //     let currentClass = $('div').attr('class'); // 현재 클래스 가져오기.
+            //     console.log(currentClass); // red
+
+            //     let currentIndex = colors.indexOf(currentClass);
+            //     console.log(currentIndex); // 0
+
+            //     // #1. 다음 색상 전환
+            //     // currentIndex : 0 ~ 5 사이 숫자
+            //     // colors.lenght - 1 : 5
+            //     // let nextClass =
+            //     //     currentIndex === colors.length - 1
+            //     //         ? colors[0]
+            //     //         : colors[currentIndex + 1];
+
+            //     // console.log('nextClass >>>> ', nextClass);
+
+            //     // #2. Random 색상 전환
+            //     // 0 <= x < 6 --- 5.xxxx
+            //     let randomIndex = Math.floor(Math.random() * colors.length); // 정수 0 <= x < 6
+            //     let nextClass = colors[randomIndex];
+
+            //     // 클래스 교체
+            //     $('div').removeClass(currentClass).addClass(nextClass);
+            // }
+
+            // 해설 (switchClass())
+            // SwitchClass(제거할 클래스, 추가할 클래스, [duration])
+            // - 애니메이션 효과
+            // - jQuery 메서드가 아님.
+            // - jQuery UI 라이브러리 필요.
+
+            // function changeColor() {
+            //     let currentClass = $('div').attr('class'); // 현재 클래스 가져오기
+            //     console.log(currentClass); // red
+
+            //     let currentIndex = colors.indexOf(currentClass);
+            //     console.log(currentIndex); // 0
+
+            //     // if (currentIndex === colors.length - 1) {
+            //     //     $('div').switchClass(currentClass, colors[0]);
+            //     // }
+
+            // currentIndex === colors.length - 1
+            //     ? $('div').switchClass(currentClass, colors[0], 1000)
+            //     : $('div').switchClass(
+            //           currentClass,
+            //           colors[currentIndex + 1],
+            //           1000
+            //       );
+            // }
+        </script>
+    </head>
+
+    <body>
+        <div class="red" onclick="changeColor();"></div>
+    </body>
+</html>

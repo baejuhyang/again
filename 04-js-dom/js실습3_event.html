@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>event 실습</title>
+        <!-- 랜덤 색상 생성기 -->
+        <!-- <style>
+            body {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            button {
+                cursor: pointer;
+            }
+        </style> -->
+    </head>
+    <body>
+        <!-- 랜덤 색상 생성기 -->
+        <!-- <div class="container">
+            <h1>Create Random Color</h1>
+            <h2>rgb(255, 255, 255)</h2>
+            <button>Create</button>
+        </div>
+        <script>
+            const btn = document.querySelector('button');
+            const h2 = document.querySelector('h2');
+
+            btn.addEventListener('click', change);
+            function change() {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                const newColor = `rgb(${r}, ${g}, ${b})`;
+                document.body.style.backgroundColor = newColor;
+                h2.innerText = newColor;
+            }
+        </script> -->
+
+        <!-- 댓글 등록하기 -->
+        <!-- <h1>댓글 등록하기</h1>
+        <form>
+            <label for="userid">아이디</label>
+            <input type="text" id="userid" name="userid" />
+            <label for="comment">댓글</label>
+            <input type="text" id="comment" name="comment" />
+            <button type="submit">등록</button>
+        </form>
+        <ul class="comment-list"></ul>
+
+        <script>
+            const form = document.querySelector('form');
+            const list = document.querySelector('.comment-list');
+
+            // form 요소의 button을 클릭하여 폼을 "제출"했을 때,
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // 폼이 제출되고 새로고침 되는 것을 막음
+
+                const userid = document.querySelector('input[name="userid"]');
+                const comment = document.querySelector('input[name="comment"]');
+
+                const newUserid = userid.value;
+                const newComment = comment.value;
+
+                const newList = document.createElement('li'); // <li></li>
+                newList.append(`${newUserid} - ${newComment}`); // <li>input 입력 값</li>
+                list.append(newList);
+
+                // input 창 초기화
+                userid.value = '';
+                comment.value = '';
+            });
+        </script> -->
+
+        <!-- 계산기 만들기 -->
+        <!-- <h1>계산기 만들기</h1>
+        <form>
+            <label for="value1">값1:</label>
+            <input type="number" id="value1" /><br />
+            <label for="value2">값2:</label>
+            <input type="number" id="value2" /><br />
+            <label for="operator">연산자: </label>
+            <input type="text" id="operator" /><br />
+            <button type="button" onclick="cal();">계산</button>
+            <button type="button" onclick="resetInput();">초기화</button
+            ><br /><br />
+            <label for="result">결과: </label>
+            <input type="text" id="result" disabled="true" />
+        </form>
+
+        <script>
+            const formTag = document.querySelector('form');
+            // const btnCal = document.querySelector('');
+            // const btnReset = document.querySelector('');
+            const value1 = document.querySelector('#value1');
+            const value2 = document.querySelector('#value2');
+            const operator = document.querySelector('#operator');
+            const result = document.querySelector('#result');
+
+            // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+            function cal() {
+                const newValue1 = Number(value1.value);
+                const newValue2 = Number(value2.value);
+                const newOperator = operator.value;
+                let number = 0;
+                // switch로도 가능
+                if (newOperator === '+') {
+                    number = newValue1 + newValue2;
+                } else if (newOperator === '-') {
+                    number = newValue1 - newValue2;
+                } else if (newOperator === '*') {
+                    number = newValue1 * newValue2;
+                } else if (newOperator === '/') {
+                    number = newValue1 / newValue2;
+                }
+
+                result.setAttribute('placeholder', number);
+            }
+
+            // [초기화] 버튼 클릭시 resetInput() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+            function resetInput() {
+                value1.value = '';
+                value2.value = '';
+                operator.value = '';
+            }
+        </script> -->
+
+        <!-- 방명록 등록하기 -->
+        <h1>여기는 방명록!!</h1>
+        <form>
+            <label for="writer">작성자</label>
+            <input type="text" id="writer" autocomplete="off" />
+            <br />
+            <br />
+
+            <label for="content">내용</label>
+            <input
+                type="text"
+                id="content"
+                style="width: 500px"
+                autocomplete="off"
+            />
+            <br />
+            <br />
+
+            <button type="button" onclick="writeNote();">등록</button>
+        </form>
+
+        <br />
+        <br />
+
+        <table id="table" border="1" cellpadding="10" cellspacing="1">
+            <tr>
+                <th>작성자</th>
+                <th>내용</th>
+                <th>작성일</th>
+            </tr>
+            <!-- 
+            코드 추가 예시
+            <tr>
+              <td>홍길동</td>
+              <td>하이</td>
+              <td>2022-10-05 12:34</td>
+            </tr>
+          -->
+        </table>
+
+        <script>
+            const tableTag = document.querySelector('table');
+            // [등록] 버튼 클릭시 writeNote() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
+            function writeNote() {
+                const writer = document.querySelector('#writer');
+                const content = document.querySelector('#content');
+                const newWriter = writer.value;
+                const newContent = content.value;
+
+                const addTr = document.createElement('tr');
+                tableTag.append(addTr);
+                const addTd1 = document.createElement('td');
+                addTd1.innerHTML = `${newWriter}`;
+                addTr.append(addTd1);
+                const addTd2 = document.createElement('td');
+                addTd2.innerHTML = `${newContent}`;
+                addTr.append(addTd2);
+                const addTd3 = document.createElement('td');
+                const now = new Date();
+                addTd3.innerHTML = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()} ${now.getHours()}:${now.getMinutes()}`;
+                addTr.append(addTd3);
+
+                writer.value = '';
+                content.value = '';
+            }
+        </script>
+    </body>
+</html>

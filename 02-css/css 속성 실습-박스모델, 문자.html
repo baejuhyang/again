@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성 실습</title>
+    <style>
+        /* 1. 박스 모델 사용 */
+        .box {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+        }
+
+        /* 4. 폰트 적용 - 눈누 폰트 */
+        @font-face {
+            font-family: 'BagelFatOne-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 5. 요소 사라지게 하기 */
+        .magic:hover { 
+            opacity: 0; 
+        }
+
+    </style>
+
+    <!-- 4. 폰트 적용 - 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Shizuru&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 1. 박스 모델 사용 -->
+    <div style="width: auto; height: 200px; background-color: orange;">
+        <div class="box" style="background-color: skyblue;">HTML</div>
+        <div class="box" style="background-color: green;">CSS</div>
+        <div class="box" style="background-color: red;">Javascript</div>
+    </div>
+
+    <br><br><br>
+    
+    <!-- 2. 글자 세로 수직 정렬 -->
+    <div 
+        style="
+        width: 100vw;
+        height: 100vw;
+        background-color: ivory;
+    ">
+
+        <div 
+            style="
+            width: calc(100vw/10);
+            height: calc(100vw/10);
+            background-color: blue;
+            color: white;
+            line-height: calc(100vw/10); 
+            text-align: center;
+        ">
+            SeSAC
+        </div>
+    </div>
+    <br><br><br>
+
+    <!-- 3. 테두리 그리기 -->
+    <div style="
+        width: 150px; height: 150px;
+        
+        border-width: 2px 5px 10px 20px;
+        border-style: solid dotted double groove;
+        border-color: red black green blue;
+    ">
+    </div>
+    <br>
+    <div style="
+        width: 150px; height: 150px;
+        
+        border-top: 5px solid pink;
+        border-right: 10px double red;
+        border-bottom: 15px dashed seagreen;
+        border-left: 20px groove skyblue;
+        border-radius: 10px 3rem 0 15%;;
+    ">
+    </div>
+    <br><br><br><br><br><br>
+
+    <!-- 4. 폰트 적용 -->
+    <div class="구글"
+        style="font-family: 'Shizuru', system-ui;
+        font-weight: 400;
+        font-style: normal;"
+    >
+        hellow hellow this is the area where google font is appiled.
+    </div>
+    <div class="눈누"
+        style="font-family: 'BagelFatOne-Regular'"
+    >
+        폰트를 적용해 봅시다. 눈누 폰트가 적용되는 곳. 
+    </div>
+    <br><br><br>
+
+    <!-- 5. 요소 사라지게 하기 -->
+    <div 
+        class="magic" 
+        style="
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+    ">
+    </div>
+</body>
+</html>

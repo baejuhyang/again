@@ -1,0 +1,103 @@
+/* ✔️가상 클래스 선택자 */
+    /* 사용자의 행동에 따라 변화하는 가상 클래스 선택자 */
+
+    .div1 {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+    }
+
+    /* :hover => 요소에 마우스를 올렸을 때  */
+        .div1:hover {
+            background-color: hotpink;
+            width: 150px;
+            height: 150px;
+        } 
+
+    /* :active => 요소를 마우스로 클릭하고 있을 때 */
+        .div1:active {
+            background-color: brown;
+            width: 200px;
+        }
+
+    /* :focus => 요소에 포커스가 됏을 때 */
+        input:focus {
+            background-color: violet;
+            color: lightblue;
+            outline-color: yellowgreen; 
+        }
+
+    .links > a:hover {
+        background-color: coral;
+    }
+
+    .links > a:visited {
+        color: red;
+    }  /* 방문하면 색을 바꿔줌 */
+
+    /* 요소 상황에 따른 가상 클래스 선택자 */
+    .zoo > * {
+        background-color: green;
+        color: white;
+    }
+
+    /* 
+        #1. E:first-child
+        => E(요소)가 첫번째 요소라면
+    */
+        .zoo > *:first-child {
+            background-color: red;
+        }
+
+    /* 
+        #2. E:last-child
+        => 요소가 마지막 요소라면
+    */
+        .zoo > *:last-child {
+            background-color: black;
+        }
+
+    /* 
+        #3. E:nth-child(n)
+        => 요소가 n번째 요소라면 (n에 숫자도 가능, 수식도 가능)
+    */
+        .zoo > *:nth-child(2){
+            background-color: aqua;
+        }
+
+    /* 
+        #4. E:not(XYZ)
+        => XYZ가 아닌 요소 선택
+    */
+        .zoo > *:not(div){
+            background-color: pink;
+        } /* 지정된 애들이 더 우선순위라 밀린다. => 첫째 막내는 그대로...*/
+
+        
+/* ✔️가상 요소 선택자 */
+    /* 여기요 앞에 택시 넣기, 여기요 뒤에 빨리 넣기 */
+    .box::before {
+        content: "택시";
+        color: red;
+    }
+    .box::after {
+        content: "빨리";
+        color: blue !important /* 자주 남용하면 안됨 */
+    }
+    .box::after {
+        content: "빨리";
+        color: green
+    }
+
+/* ✔️속성 선택자 */
+    [disabled] {
+        color: red;
+        background-color: aquamarine
+    }
+    [type="password"] {
+        color: blue;
+        background-color: lightcoral;
+    }
+    [placeholder] {
+        background-color: black;
+    }

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>종합실습2</title>
+        <style>
+            .container {
+                width: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            #check2 {
+                display: none;
+            }
+            #check2 + label {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border: 3px solid #707070;
+
+                position: relative;
+            }
+            #check2:checked + label::before {
+                content: '※';
+                background-color: yellow;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #check3 {
+                display: none;
+            }
+            #check3 + label {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                border: 3px solid #707070;
+                border-radius: 50%;
+                position: relative;
+            }
+            #check3:checked + label {
+                background-color: orange;
+                text-align: center;
+            }
+            #check3:checked + label::before {
+                content: '★';
+                font-size: 25px;
+            }
+            /* #check3:checked + label::before {
+                content: '★';
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: orange;
+                text-align: center;
+                line-height: 40px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            } */
+
+            #check4 {
+                display: none;
+            }
+            #check4 + label {
+                width: 50px;
+                height: 50px;
+                border: 3px solid #707070;
+                border-radius: 10px;
+                position: relative;
+            }
+            #check4:checked + label {
+                background-color: red;
+                text-align: center;
+                line-height: 50px;
+            }
+            #check4:checked + label::before {
+                content: '♥';
+                /* background-color: yellow; */
+            }
+            /* #check4:checked + label::before {
+                content: '♥';
+                width: 50px;
+                height: 50px;
+                border-radius: 7px;
+                background-color: red;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="checkbox" id="check1" />
+            <label for="check1"></label>
+            <input type="checkbox" id="check2" />
+            <label for="check2"></label>
+            <input type="checkbox" id="check3" />
+            <label for="check3"></label>
+            <input type="checkbox" id="check4" />
+            <label for="check4"></label>
+        </div>
+    </body>
+</html>

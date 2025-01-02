@@ -1,0 +1,188 @@
+/* 공 움직이기*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(orange, 70%, yellow);
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    position: absolute;
+
+    animation: moving 7s linear infinite;
+}
+
+@keyframes moving {
+    0%,
+    100% {
+        top: 0;
+        left: 0;
+
+        /* transform: translate(0px); */
+    }
+    25% {
+        top: 0;
+        left: calc(100vw - 100px);
+
+        /* transform: translate(calc(100vw - 100px), 0px); */
+    }
+    50% {
+        top: calc(100vh - 100px);
+        left: calc(100vw - 100px);
+
+        /* transform: translate(calc(100vw - 100px), calc(100vh - 100px)); */
+    }
+    75% {
+        top: calc(100vh - 100px);
+        left: 0;
+
+        /* transform: translate(0, calc(100vh - 100px)); */
+    }
+}
+
+/* 글자 움직이기 */
+/* .text {
+    position: relative;
+    left: 100%;
+
+    width: 200%;
+    animation: showing 4s infinite;
+}
+
+@keyframes showing {
+    100% {
+        left: 0%;
+        width: 100%;
+    }
+} */
+
+/* 미디어 쿼리 사용 */
+/* @media (min-width: 501px) {
+    body {
+        background-color: skyblue
+    } 
+}
+
+@media (max-width: 300px) {
+    body {
+        background-color: orange
+    } 
+}
+
+@media (max-height: 300px) {
+    p {
+        font-size: 10px;
+    }
+}
+
+@media (min-height: 501px) {
+    body {
+        background-color: green;
+    } 
+} */
+
+/* media query 실습1 */
+/* 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 0.5px solid red;
+    border-radius: 10%;
+    background-color: skyblue
+    margin: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        flex-direction: row;
+    }
+
+    div {
+        background-color: black;
+    }
+}
+ */
+
+/* media query 실습2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(79, 75, 75);
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu li {
+    height: 49px;
+    /* margin: 10px 0; */
+    /* 텍스트 중앙정렬 */
+    text-align: center;
+    line-height: 49px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: grey;
+    border-radius: 5px;
+}
+
+/* 모바일에서 햄버거 메뉴 활성화 */
+@media (max-width: 768px) {
+    label {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #hamburger:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        background-color: rgb(79, 75, 75);
+        width: 100%;
+    }
+}

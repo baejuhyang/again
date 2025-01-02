@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 단위</title>
+    <link rel="stylesheet" href="./unit.css">
+</head>
+<body>
+    <h1>px</h1>
+    <div class="box px"></div>
+
+    <h1>%</h1>
+    <div class="box pct-parent">
+        <div class="pct-child"></div>
+    </div>
+
+    <h1>em</h1>
+    <div class="box">
+        가가 <!-- 1em = 20px (css에서 html font-size 설정함) -->
+        <span class="em"> <!-- 2em = 2*20px = 40px -->
+            나나
+            <span class="em">다다</span> <!-- 2em = 2*40px(상위 요소의 font-size) = 80px -->
+        </span>
+    </div>
+
+    <hr>
+    <h2>em 주의사항</h2>
+    <div class="box">
+        <div class="case1">여기는 20px
+            <span class="em-3">여기는 3em 이므로</span> 
+            <!-- 3em = 3 * 20px = 60px-->
+        </div>
+        <div class="case2">
+            여기는 10px
+            <span class="em-3">여기는 3em 이므로</span>
+            <!-- 3em = 3 * 10px = 30px-->
+        </div>
+    </div>
+
+    <hr>
+    <h1>rem</h1>
+    <div class="box">
+        가가 <!-- 1rem = 20px -->
+        <span class="rem">
+            나나 <!-- 2rem = 2*20px = 40px -->
+            <span class="rem">다다</span> <!-- 2rem = 2*20px = 40px -->
+        </span>
+    </div>
+
+    <hr>
+    <button class="btn success"">Success</button>
+    <button class="btn error">Error</button>
+</body>
+</html>

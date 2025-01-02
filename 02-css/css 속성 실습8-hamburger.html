@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* body {
+                font-family: Arial, sans-serif;
+            } */
+
+            nav {
+                position: relative;
+                background-color: #333;
+                padding: 10px;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .hamburger-label {
+                display: none;
+                cursor: pointer;
+            }
+
+            .line {
+                width: 30px;
+                height: 3px;
+                background-color: white;
+                margin: 5px 0;
+            }
+
+            .nav-menu {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .nav-menu li a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+            }
+
+            .nav-menu li a:hover {
+                background-color: #444;
+                border-radius: 5px;
+            }
+
+            /* 모바일에서 햄버거 메뉴 활성화 */
+            @media (max-width: 768px) {
+                .hamburger-label {
+                    display: block;
+                    width: 30px;
+                }
+
+                .nav-menu {
+                    display: none;
+                    flex-direction: column;
+                    background-color: #333;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .hamburger:checked ~ .nav-menu {
+                    display: flex;
+                }
+
+                .nav-menu li {
+                    margin: 10px 0;
+                }
+            }
+        </style>
+        <title>햄버거 메뉴</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="hamburger" class="hamburger" />
+            <!-- 햄버거 문양처럼 직접 꾸며도 되고, 문자, 아이콘으로 대체해도 됩니다! -->
+            <label for="hamburger" class="hamburger-label">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
