@@ -1,4 +1,4 @@
-// ES6 버전전
+// ES6 버전
 // package.json - type - module 추가.
 // #1. 여러 모듈 내보내기.
 

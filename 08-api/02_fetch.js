@@ -169,3 +169,18 @@ fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
     .catch((err) => {
         console.error(err);
     });
+
+// #7. 게시글 데이터를 가져와 화면에 표시
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        const postList = document.getElementById('post-list');
+        data.forEach((post) => {
+            const listItem = document.createElement('li'); // <li></li>
+            listItem.textContent = `${post.title}`;
+            postList.appendChild(listItem);
+        });
+    })
+    .catch((err) => console.error(err));

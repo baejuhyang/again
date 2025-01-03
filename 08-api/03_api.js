@@ -1,7 +1,7 @@
 // #1. 게시글을 저장할 로컬 변수
 let posts = [];
 
-// #2. 게시글을 보여주는 함수
+// // #2. 게시글을 보여주는 함수
 function displayPosts() {
     const postsContainer = document.getElementById('posts');
     postsContainer.innerHTML = ''; // 이전에 보여준 게시글들을 클리어.
@@ -20,6 +20,8 @@ function displayPosts() {
     console.log(posts);
 }
 
+displayPosts();
+
 // #3. API에서 게시글 가져오기
 function fetchPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -34,7 +36,6 @@ function fetchPosts() {
 // #4. 게시글 수정 함수
 function startEditPost(id) {
     const post = posts.find((post) => post.id === id); // id = 4
-
     if (!post) return;
 
     const titleElement = document.getElementById(`title-${id}`);
@@ -55,7 +56,7 @@ function saveEditPost(id) {
     const editedTitle = document.getElementById(`edit-title-${id}`).value; // 수정 된 Title 값
     const editedBody = document.getElementById(`edit-body-${id}`).value; // 수정 된 body 값
 
-    const postIndex = posts.findIndex((post) => post.id === id);
+    const postIndex = posts.findIndex((post) => post.id === id); // .findIndex 메서드: 조건을 만족하는 첫 번째 요소의 인덱스를 반환, 요소를 찾지 못하면 -1이 반환됨.
     if (postIndex > -1) {
         posts[postIndex].title = editedTitle; // 여기에서 수정 된 내용이 재할당 하면서 덮어짐.
         posts[postIndex].body = editedBody;
@@ -70,5 +71,5 @@ function deletePost(id) {
     displayPosts();
 }
 
-// "Load Posts" 버튼에 이벤트 리스너 추가.
+// // "Load Posts" 버튼에 이벤트 리스너 추가.
 document.getElementById('fetchPosts').addEventListener('click', fetchPosts);
