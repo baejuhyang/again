@@ -9,7 +9,6 @@ async function getMovieData() {
     h3.innerText = `영화 키워드 ${word}`;
 
     // fetch로 데이터 불러오기
-
     const res = await fetch(
         `http://www.omdbapi.com/?apikey=3d5f1495&s=${word}`
     );
