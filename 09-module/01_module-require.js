@@ -1,5 +1,3 @@
-console.log('출력');
-
 // *1.
 // 01_module의 모듈을 불러와 사용.
 const add = require('./01_module');
