@@ -1,0 +1,16 @@
+#container {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+}
+
+#bestseller {
+    color: orange;
+}
+
+#container div p {
+    font-size: 14 px;
+}

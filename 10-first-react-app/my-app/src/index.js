@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 import Clock from './Clock';
-// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-);
+// root.render(
+//     <React.StrictMode>
+//         <App />
+//     </React.StrictMode>
+// );
 
 // </React.StrictMode>
 // - 개발 모드에서만 작동하는 특수 컴포넌트.
 // - 문제 감지나 경고 하기 위해 사용.
 
 // #1. 가장 단순한 예시
-// root.render(<h1>Hello, world!</h1>);
+root.render(<h1>Hello, world!</h1>);
 
 // ReactDOM.render() 메서드를 사용하여 React 컴포넌트를 'index.html'의
 // 빈 <div></div> 요소에 렌더링 함.
