@@ -8,14 +8,14 @@ import { StateFunctionComponent } from './practice_state';
 function App() {
     return (
         <div className="App">
-            {/* <CounterClass></CounterClass>
+            {/* <CounterClass></CounterClass> */}
             <hr />
             <CounterFunction value={'Plus 1'}></CounterFunction>
             <hr />
-            <SayFunction></SayFunction> */}
+            <SayFunction></SayFunction>
             {/* <StateClassComponent></StateClassComponent> */}
 
-            <StateFunctionComponent></StateFunctionComponent>
+            {/* <StateFunctionComponent></StateFunctionComponent> */}
         </div>
     );
 }

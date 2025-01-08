@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const SayFunction = () => {
-    console.log(useState('Welcome')); // 초기 상태 값 설정 후, 반환 값 출력 // 임시 저장 용도
+    // console.log(useState('Welcome')); // 초기 상태 값 설정 후, 반환 값 출력 // 임시 저장 용도
 
     const [message, setMessage] = useState('welcome');
     // message: 현재 상태
