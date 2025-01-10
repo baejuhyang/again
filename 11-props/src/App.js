@@ -25,28 +25,33 @@ function App() {
             -> {}로 감싸야 React가 이것을 JS 숫자로 인식함. */}
 
             {/* children - 단일 자식 요소 전달 */}
-            <Button link="https://www.google.com">Google</Button>
+            {/* <Button link="https://www.google.com">Google</Button>
             <Button></Button>
-            <hr />
+            <hr /> */}
 
             {/* children - 다중 자식 요소 전달 */}
-            <MultiChild>
+            {/* <MultiChild>
                 <b>다중 자식</b>
                 <p>요소 전달</p>
                 <div>체험해보기</div>
-            </MultiChild>
+            </MultiChild> */}
 
             {/* props 실습1 */}
-            {/* <FoodComponent></FoodComponent>
-            <hr /> */}
+            {/* <FoodComponent></FoodComponent> */}
+            <hr />
 
             {/* props 실습2 */}
-            {/* <BookComponent></BookComponent> */}
+            {/* <BookComponent
+                title="나의 하루는 4시 40분에 시작된다"
+                author="김유진"
+                price="13,500원"
+                type="자기계발서"
+            ></BookComponent> */}
 
             {/* prop 실습3 */}
-            {/* <ClassComponentPractice text="App 컴포넌트에서 넘겨준 text props 입니다."></ClassComponentPractice>
+            <ClassComponentPractice text="App 컴포넌트에서 넘겨준 text props 입니다."></ClassComponentPractice>
             <hr></hr>
-            <ClassComponentPractice></ClassComponentPractice> */}
+            <ClassComponentPractice></ClassComponentPractice>
         </div>
     );
 }

@@ -7,11 +7,13 @@ import SyntheticEvent from './SyntheticEvent';
 function App() {
     return (
         <div className="App">
-            {/* <SyntheticEvent></SyntheticEvent>
+            {/* <SyntheticEvent></SyntheticEvent> */}
             <hr />
-            <FuncComponent></FuncComponent>
+            {/* <FuncComponent></FuncComponent> */}
             <hr />
-            <ClassComponent></ClassComponent> */}
+            {/* <ClassComponent></ClassComponent> */}
+
+            {/* 실습 */}
             <PraticeEvent></PraticeEvent>
         </div>
     );

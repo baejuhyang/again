@@ -30,7 +30,7 @@ export default function Basic() {
 
         return (
             <li>
-                값: {currentValue}, 인덱스: {index}, 원본 배열:{' '}
+                값: {currentValue}, 인덱스: {index}, 원본 배열:
                 {array.join(', ')}
             </li>
         );

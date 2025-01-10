@@ -9,9 +9,9 @@ function App() {
             {/* map, filter */}
             {/* <Basic></Basic> */}
             {/* 예시 */}
-            {/* <Alphabet></Alphabet> */}
+            <Alphabet></Alphabet>
             {/* 실습 */}
-            <PracticeMapFilter></PracticeMapFilter>
+            {/* <PracticeMapFilter></PracticeMapFilter> */}
         </div>
     );
 }

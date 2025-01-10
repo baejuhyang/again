@@ -10,11 +10,12 @@ function App() {
         <div className="App">
             {/* <CounterClass></CounterClass> */}
             <hr />
-            <CounterFunction value={'Plus 1'}></CounterFunction>
+            {/* <CounterFunction value={'Plus 1'}></CounterFunction> */}
             <hr />
-            <SayFunction></SayFunction>
-            {/* <StateClassComponent></StateClassComponent> */}
+            {/* <SayFunction></SayFunction> */}
 
+            {/* 실습 */}
+            <StateClassComponent></StateClassComponent>
             {/* <StateFunctionComponent></StateFunctionComponent> */}
         </div>
     );

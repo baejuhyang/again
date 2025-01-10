@@ -94,7 +94,6 @@ export const PracticeMapFilter = () => {
 
     const changeOption = (e) => {
         setOption(e.target.value);
-        searchPostsFunction();
     };
 
     const searchPostsFunction = () => {
@@ -155,7 +154,15 @@ export const PracticeMapFilter = () => {
             <button style={{ margin: '5px' }} onClick={searchPostsFunction}>
                 검색
             </button>
-            <button>전체</button>
+            <button
+                onClick={() => {
+                    setSearchPosts(posts);
+                    setSearchTitle('검색결과');
+                    setShow('block');
+                }}
+            >
+                전체
+            </button>
             <br />
             <br />
             <br />

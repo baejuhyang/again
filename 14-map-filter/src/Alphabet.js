@@ -17,7 +17,7 @@ export const Alphabet = () => {
     const [inputAlpha, setInputAlpha] = useState('');
 
     // 글자 추가 기능
-    const addAlpha = (e) => {
+    const addAlpha = () => {
         // input이 빈값이라면 alphabet 상태가 변경되지 않도록 하기
 
         if (inputAlpha.trim().length === 0) {
@@ -102,9 +102,9 @@ export const Alphabet = () => {
                 ))} */}
 
                 {/* 배열 안에 객체 ex */}
-                {/* {alphabet.map((value) => (
-                    <li key={value.id}>{value.alpha}</li>
-                ))} */}
+                {alphabet.map((value) => (
+                    <li key={value.id}>{value.alpha}</li> // .접근법으로 속성에 접근
+                ))}
             </ol>
 
             {/* #1. 알파벳 추가하기 기능 */}
@@ -120,7 +120,7 @@ export const Alphabet = () => {
             <button onClick={addAlpha}>ADD</button>
 
             {/* #3. 알파벳 삭제하기 기능 */}
-            <ol>
+            {/* <ol>
                 {alphabet.map((value) => (
                     <li
                         key={value.id}
@@ -129,7 +129,7 @@ export const Alphabet = () => {
                         {value.alpha}
                     </li>
                 ))}
-            </ol>
+            </ol> */}
 
             {/* #4. "이벤트 위임" 방식 적용 - 효율성 증가! */}
             <ol onDoubleClick={handleDobuleClick}>

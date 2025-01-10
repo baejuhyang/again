@@ -36,8 +36,11 @@ export default function SyntheticEvent() {
      */
 
     function printInputValue(event) {
-        console.log(event.target.value);
+        console.log(event); // 이벤트 객체
+        console.log(event.target); // input 태그
+        console.log(event.target.value); // 입력한 내용
     }
+
     return (
         <>
             <div>SyntheticEvent</div>
