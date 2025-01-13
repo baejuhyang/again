@@ -1,28 +1,28 @@
 // 실습1
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// export default class PraticeEvent extends Component {
-//     state = {
-//         message: 'Hello World!',
-//     };
+export default class PraticeEvent extends Component {
+    state = {
+        message: 'Hello World!',
+    };
 
-//     render() {
-//         const { message } = this.state;
+    render() {
+        const { message } = this.state;
 
-//         return (
-//             <>
-//                 <h1>{message}</h1>
-//                 <button
-//                     onClick={() => {
-//                         this.setState({ message: 'Goodbye World!' });
-//                     }}
-//                 >
-//                     클릭
-//                 </button>
-//             </>
-//         );
-//     }
-// }
+        return (
+            <>
+                <h1>{message}</h1>
+                <button
+                    onClick={() => {
+                        this.setState({ message: 'Goodbye World!' });
+                    }}
+                >
+                    클릭
+                </button>
+            </>
+        );
+    }
+}
 
 // 실습2
 // import React, { Component } from 'react';
@@ -225,33 +225,33 @@
 // };
 
 // 방법2) 상태 관리를 한번에 하는 방법
-import React, { useState } from 'react';
-import Select from './Select';
-import Input from './Input';
-import Result from './Result';
+// import React, { useState } from 'react';
+// import Select from './Select';
+// import Input from './Input';
+// import Result from './Result';
 
-// 부모 컴포넌트
-export const PraticeEvent = () => {
-    // #1. 초기값 설정
-    const [data, setData] = useState({
-        fruit: 'apple',
-        background: 'black',
-        color: 'white',
-        content: 'text',
-    });
+// // 부모 컴포넌트
+// export const PraticeEvent = () => {
+//     // #1. 초기값 설정
+//     const [data, setData] = useState({
+//         fruit: 'apple',
+//         background: 'black',
+//         color: 'white',
+//         content: 'text',
+//     });
 
-    return (
-        <>
-            {/* props를 넘겨줄건데, setData 함수를 넘겨줘야 state 변경이 가능 */}
-            <div>
-                <Select setData={setData}></Select>
-            </div>
-            <div>
-                <Input setData={setData}></Input>
-            </div>
-            <div>
-                <Result data={data}></Result>
-            </div>
-        </>
-    );
-};
+//     return (
+//         <>
+//             {/* props를 넘겨줄건데, setData 함수를 넘겨줘야 state 변경이 가능 */}
+//             <div>
+//                 <Select setData={setData}></Select>
+//             </div>
+//             <div>
+//                 <Input setData={setData}></Input>
+//             </div>
+//             <div>
+//                 <Result data={data}></Result>
+//             </div>
+//         </>
+//     );
+// };

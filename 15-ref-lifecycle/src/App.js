@@ -15,14 +15,14 @@ function App() {
             {/* <RefSample1></RefSample1> */}
             {/* <RefSample2></RefSample2> */}
 
-            <RefSample3></RefSample3>
-            <RefSample4></RefSample4>
+            {/* <RefSample3></RefSample3>
+            <RefSample4></RefSample4> */}
 
             {/* 실습 */}
             {/* <PracticeRef></PracticeRef> */}
 
             {/* lifecycle */}
-            {/* <LifeCycleClass></LifeCycleClass> */}
+            <LifeCycleClass></LifeCycleClass>
             {/* <LifeCycleFunction></LifeCycleFunction> */}
 
             {/* 실습 */}
