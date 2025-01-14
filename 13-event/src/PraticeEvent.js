@@ -1,28 +1,28 @@
 // 실습1
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-export default class PraticeEvent extends Component {
-    state = {
-        message: 'Hello World!',
-    };
+// export default class PraticeEvent extends Component {
+//     state = {
+//         message: 'Hello World!',
+//     };
 
-    render() {
-        const { message } = this.state;
+//     render() {
+//         const { message } = this.state;
 
-        return (
-            <>
-                <h1>{message}</h1>
-                <button
-                    onClick={() => {
-                        this.setState({ message: 'Goodbye World!' });
-                    }}
-                >
-                    클릭
-                </button>
-            </>
-        );
-    }
-}
+//         return (
+//             <>
+//                 <h1>{message}</h1>
+//                 <button
+//                     onClick={() => {
+//                         this.setState({ message: 'Goodbye World!' });
+//                     }}
+//                 >
+//                     클릭
+//                 </button>
+//             </>
+//         );
+//     }
+// }
 
 // 실습2
 // import React, { Component } from 'react';
@@ -64,8 +64,8 @@ export default class PraticeEvent extends Component {
 // }
 
 // 실습3
+// 방법1
 // import React, { useState } from 'react';
-
 // export const PraticeEvent = () => {
 //     const [msg, setMsg] = useState('사라져라');
 //     const [currentDisplay, setDisplay] = useState('block');
@@ -84,6 +84,26 @@ export default class PraticeEvent extends Component {
 //         <>
 //             <button onClick={onClickChange}>{msg}</button>
 //             <h2 style={{ display: currentDisplay }}>안녕하세요</h2>
+//         </>
+//     );
+// };
+
+// 답안) 단축평가를 이용하기
+// import React, { useState } from 'react';
+// export const PraticeEvent = () => {
+//     let [display, setDisplay] = useState(true);
+
+//     const changeDisplay = () => {
+//         setDisplay(!display);
+//     };
+
+//     return (
+//         <>
+//             <button onClick={setDisplay}>
+//                 {display ? '사라져라' : '보여라'}
+//             </button>
+//             {display && <h4>안녕하세요</h4>}{' '}
+//             {/* display가 true일 때 <h4>를 반환 */}
 //         </>
 //     );
 // };
@@ -169,60 +189,60 @@ export default class PraticeEvent extends Component {
 
 // 종합실습 해답
 // 방법1) 상태 관리를 따로따로 하는 방법
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
-// export const PraticeEvent = () => {
-//     const [fruit, setFruit] = useState('peach.png');
-//     const [bgc, setBgc] = useState('red');
-//     const [color, setColor] = useState('black');
-//     const [text, setText] = useState('');
+export const PraticeEvent = () => {
+    const [fruit, setFruit] = useState('peach.png');
+    const [bgc, setBgc] = useState('red');
+    const [color, setColor] = useState('black');
+    const [text, setText] = useState('');
 
-//     const fruitChange = (e) => {
-//         setFruit(e.target.value);
-//     };
-//     const bgcChange = (e) => {
-//         setBgc(e.target.value);
-//     };
-//     const colorChange = (e) => {
-//         setColor(e.target.value);
-//     };
-//     function Typing(e) {
-//         setText(e.target.value);
-//     }
+    const fruitChange = (e) => {
+        setFruit(e.target.value);
+    };
+    const bgcChange = (e) => {
+        setBgc(e.target.value);
+    };
+    const colorChange = (e) => {
+        setColor(e.target.value);
+    };
+    function Typing(e) {
+        setText(e.target.value);
+    }
 
-//     return (
-//         <>
-//             <div>
-//                 과일:
-//                 <select onChange={fruitChange}>
-//                     <option value="peach.png">복숭아</option>
-//                     <option value="apple.png">사과</option>
-//                     <option value="banana.png">바나나</option>
-//                 </select>
-//                 배경색:
-//                 <select onChange={bgcChange}>
-//                     <option value="red">빨강</option>
-//                     <option value="yellow">노랑</option>
-//                     <option value="blue">파랑</option>
-//                 </select>
-//                 글자색:
-//                 <select onChange={colorChange}>
-//                     <option value="black">검정</option>
-//                     <option value="red">빨강</option>
-//                     <option value="yellow">노랑</option>
-//                 </select>
-//             </div>
-//             <div>
-//                 내용: <input type="text" onChange={Typing} />
-//             </div>
-//             <div>
-//                 <img src={fruit} alt="" width={200} height={200} />
-//                 {/* 이미지는 public 폴더에 있는 것으로 사용 */}
-//             </div>
-//             <div style={{ backgroundColor: bgc, color: color }}>{text}</div>
-//         </>
-//     );
-// };
+    return (
+        <>
+            <div>
+                과일:
+                <select onChange={fruitChange}>
+                    <option value="peach.png">복숭아</option>
+                    <option value="apple.png">사과</option>
+                    <option value="banana.png">바나나</option>
+                </select>
+                배경색:
+                <select onChange={bgcChange}>
+                    <option value="red">빨강</option>
+                    <option value="yellow">노랑</option>
+                    <option value="blue">파랑</option>
+                </select>
+                글자색:
+                <select onChange={colorChange}>
+                    <option value="black">검정</option>
+                    <option value="red">빨강</option>
+                    <option value="yellow">노랑</option>
+                </select>
+            </div>
+            <div>
+                내용: <input type="text" onChange={Typing} />
+            </div>
+            <div>
+                <img src={fruit} alt="" width={200} height={200} />
+                {/* 이미지는 public 폴더에 있는 것으로 사용했음 */}
+            </div>
+            <div style={{ backgroundColor: bgc, color: color }}>{text}</div>
+        </>
+    );
+};
 
 // 방법2) 상태 관리를 한번에 하는 방법
 // import React, { useState } from 'react';
