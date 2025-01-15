@@ -21,7 +21,7 @@ function App() {
         <div className="App">
             {/* <UseMemoEx></UseMemoEx> */}
             {/* <UseCallbackEx></UseCallbackEx> */}
-            {/* <UseCallbackEx2 postId={7}></UseCallbackEx2> */}
+            <UseCallbackEx2 postId={7}></UseCallbackEx2>
             {/* <UseReducerEx></UseReducerEx> */}
             {/* <ThemeProvider>
                 <ThemeMiddle></ThemeMiddle>
@@ -33,11 +33,10 @@ function App() {
             {/* <ProductFilter></ProductFilter> */}
             {/* <ShoppingCartApp></ShoppingCartApp> */}
             {/* <TodoApp></TodoApp> */}
-
-            <UserNameProvider>
+            {/* <UserNameProvider>
                 <DisplayName></DisplayName>
                 <NameInput></NameInput>
-            </UserNameProvider>
+            </UserNameProvider> */}
         </div>
     );
 }

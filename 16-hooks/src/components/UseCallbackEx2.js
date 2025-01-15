@@ -4,27 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 export default function UseCallbackEx2({ postId }) {
     const [post, setPost] = useState({});
     // [before]
-    // const getPost = async () => {
-    //     console.log('data fetching...');
-
-    //     // 데이터 요청
-    //     try {
-    //         const res = await axios.get(
-    //             `https://jsonplaceholder.typicode.com/posts/${postId}`
-    //         );
-    //         setPost(res.data);
-    //         console.log('res', res);
-    //         console.log('res.data', res.data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-    // console.log('post', post);
-
-    // [after]
-    // useCallback 훅으로 메모이제이션 -> 의존성 배열에 있는 내용이 변경되지 않는 한 컴포넌트는 리렌더링 되지 않음.
-    // => 내가 필요한 순간에만 api 요청을 날림.
-    const getPost = useCallback(async () => {
+    const getPost = async () => {
         console.log('data fetching...');
 
         // 데이터 요청
@@ -38,7 +18,27 @@ export default function UseCallbackEx2({ postId }) {
         } catch (error) {
             console.log(error);
         }
-    }, [postId]); // postId가 변경될 때만 data를 가져옴
+    };
+    console.log('post', post);
+
+    // [after]
+    // useCallback 훅으로 메모이제이션 -> 의존성 배열에 있는 내용이 변경되지 않는 한 컴포넌트는 리렌더링 되지 않음.
+    // => 내가 필요한 순간에만 api 요청을 날림.
+    // const getPost = useCallback(async () => {
+    //     console.log('data fetching...');
+
+    //     // 데이터 요청
+    //     try {
+    //         const res = await axios.get(
+    //             `https://jsonplaceholder.typicode.com/posts/${postId}`
+    //         );
+    //         setPost(res.data);
+    //         console.log('res', res);
+    //         console.log('res.data', res.data);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }, [postId]); // postId가 변경될 때만 data를 가져옴
 
     // axios
     // - 외부 라이브러리 => 패키지 설치 필요
@@ -47,16 +47,16 @@ export default function UseCallbackEx2({ postId }) {
     // 자동으로 json 데이터로 파싱해줌. -> 서버로부터 받은 응답을 자동으로 JSON으로 파싱해서 response.data저장됨.
     // => fetch와 달리 res.json() 수동으로 가져 올 필요가 없음.
 
-    // useEffect(() => {
-    //     // 랜더링되자마자 함수 실행
-    //     getPost();
-    // }, []);
+    useEffect(() => {
+        // 랜더링되자마자 함수 실행
+        getPost();
+    }, []);
 
     // useEffect 의존성 배열에 '함수'를 적을 시 함수가 실행될 때마다 작동됨
     // 컴포넌트가 리렌더링 -> 함수 재생성 (주소값 변경) -> getPost 함수를 무한 호출이 됨
-    useEffect(() => {
-        getPost();
-    }, [getPost]); // 새로운 함수로 인식을 하고 useEffect가 실행됨
+    // useEffect(() => {
+    //     getPost();
+    // }, [getPost]); // 새로운 함수로 인식을 하고 useEffect가 실행됨
     // useCallback을 사용 시
 
     return (
