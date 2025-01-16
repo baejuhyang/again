@@ -5,8 +5,8 @@ import useTheme from '../hooks/useTheme';
 
 export const ThemedComponent = () => {
     // #4. useContext 훅을 사용하여 ThemeContext 값 직접 가져와서 사용.
-    // const { theme, toggleTheme } = useContext(ThemeContext);
-    const { theme, toggleTheme } = useTheme(); // 만들어 놓은 useTheme 훅 사용
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    // const { theme, toggleTheme } = useTheme(); // 만들어 놓은 useTheme 훅 사용
     return (
         <div
             style={{

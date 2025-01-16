@@ -21,7 +21,8 @@ export default function useToggle(initValue = false) {
 
     // 상태전환 함수
     const toggleValue = (newValue) => {
-        console.log('타입', typeof newValue);
+        console.log(typeof newValue); // object
+        console.log(newValue); // object
 
         // 1. newValue가 boolean 타입이면 해당 값으로 상태 설정 // 명시적 설정
         // 2. 아니면 기존 상태를 반전 --> 기존 토글 동작 지원

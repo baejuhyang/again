@@ -6,6 +6,8 @@ import TodoApp from './components/PracticeHooks';
 import ShoppingCartApp from './components/PracticeHooks';
 import ProductFilter from './components/PracticeHooks';
 import { NameInput } from './components/PracticeNameInput';
+import Form from './components/react-hook-form/Form';
+import PracticeForm from './components/react-hook-form/PracticeForm';
 import { ThemeMiddle } from './components/ThemeMiddle';
 import { ThemeProvider } from './components/ThemeProvider';
 import UseCallbackEx from './components/UseCallbackEx';
@@ -21,13 +23,13 @@ function App() {
         <div className="App">
             {/* <UseMemoEx></UseMemoEx> */}
             {/* <UseCallbackEx></UseCallbackEx> */}
-            <UseCallbackEx2 postId={7}></UseCallbackEx2>
+            {/* <UseCallbackEx2 postId={7}></UseCallbackEx2> */}
             {/* <UseReducerEx></UseReducerEx> */}
             {/* <ThemeProvider>
                 <ThemeMiddle></ThemeMiddle>
                 <ThemeMiddle></ThemeMiddle>
             </ThemeProvider> */}
-            {/* <Faq></Faq> */}
+            <Faq></Faq>
 
             {/* 실습 */}
             {/* <ProductFilter></ProductFilter> */}
@@ -37,6 +39,10 @@ function App() {
                 <DisplayName></DisplayName>
                 <NameInput></NameInput>
             </UserNameProvider> */}
+
+            {/* React Hook Form */}
+            {/* <Form></Form> */}
+            {/* <PracticeForm></PracticeForm> */}
         </div>
     );
 }
