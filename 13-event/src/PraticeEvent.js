@@ -189,89 +189,89 @@
 
 // 종합실습 해답
 // 방법1) 상태 관리를 따로따로 하는 방법
-import React, { useState } from 'react';
-
-export const PraticeEvent = () => {
-    const [fruit, setFruit] = useState('peach.png');
-    const [bgc, setBgc] = useState('red');
-    const [color, setColor] = useState('black');
-    const [text, setText] = useState('');
-
-    const fruitChange = (e) => {
-        setFruit(e.target.value);
-    };
-    const bgcChange = (e) => {
-        setBgc(e.target.value);
-    };
-    const colorChange = (e) => {
-        setColor(e.target.value);
-    };
-    function Typing(e) {
-        setText(e.target.value);
-    }
-
-    return (
-        <>
-            <div>
-                과일:
-                <select onChange={fruitChange}>
-                    <option value="peach.png">복숭아</option>
-                    <option value="apple.png">사과</option>
-                    <option value="banana.png">바나나</option>
-                </select>
-                배경색:
-                <select onChange={bgcChange}>
-                    <option value="red">빨강</option>
-                    <option value="yellow">노랑</option>
-                    <option value="blue">파랑</option>
-                </select>
-                글자색:
-                <select onChange={colorChange}>
-                    <option value="black">검정</option>
-                    <option value="red">빨강</option>
-                    <option value="yellow">노랑</option>
-                </select>
-            </div>
-            <div>
-                내용: <input type="text" onChange={Typing} />
-            </div>
-            <div>
-                <img src={fruit} alt="" width={200} height={200} />
-                {/* 이미지는 public 폴더에 있는 것으로 사용했음 */}
-            </div>
-            <div style={{ backgroundColor: bgc, color: color }}>{text}</div>
-        </>
-    );
-};
-
-// 방법2) 상태 관리를 한번에 하는 방법
 // import React, { useState } from 'react';
-// import Select from './Select';
-// import Input from './Input';
-// import Result from './Result';
 
-// // 부모 컴포넌트
 // export const PraticeEvent = () => {
-//     // #1. 초기값 설정
-//     const [data, setData] = useState({
-//         fruit: 'apple',
-//         background: 'black',
-//         color: 'white',
-//         content: 'text',
-//     });
+//     const [fruit, setFruit] = useState('peach.png');
+//     const [bgc, setBgc] = useState('red');
+//     const [color, setColor] = useState('black');
+//     const [text, setText] = useState('');
+
+//     const fruitChange = (e) => {
+//         setFruit(e.target.value);
+//     };
+//     const bgcChange = (e) => {
+//         setBgc(e.target.value);
+//     };
+//     const colorChange = (e) => {
+//         setColor(e.target.value);
+//     };
+//     function Typing(e) {
+//         setText(e.target.value);
+//     }
 
 //     return (
 //         <>
-//             {/* props를 넘겨줄건데, setData 함수를 넘겨줘야 state 변경이 가능 */}
 //             <div>
-//                 <Select setData={setData}></Select>
+//                 과일:
+//                 <select onChange={fruitChange}>
+//                     <option value="peach.png">복숭아</option>
+//                     <option value="apple.png">사과</option>
+//                     <option value="banana.png">바나나</option>
+//                 </select>
+//                 배경색:
+//                 <select onChange={bgcChange}>
+//                     <option value="red">빨강</option>
+//                     <option value="yellow">노랑</option>
+//                     <option value="blue">파랑</option>
+//                 </select>
+//                 글자색:
+//                 <select onChange={colorChange}>
+//                     <option value="black">검정</option>
+//                     <option value="red">빨강</option>
+//                     <option value="yellow">노랑</option>
+//                 </select>
 //             </div>
 //             <div>
-//                 <Input setData={setData}></Input>
+//                 내용: <input type="text" onChange={Typing} />
 //             </div>
 //             <div>
-//                 <Result data={data}></Result>
+//                 <img src={fruit} alt="" width={200} height={200} />
+//                 {/* 이미지는 public 폴더에 있는 것으로 사용했음 */}
 //             </div>
+//             <div style={{ backgroundColor: bgc, color: color }}>{text}</div>
 //         </>
 //     );
 // };
+
+// 방법2) 상태 관리를 한번에 하는 방법
+import React, { useState } from 'react';
+import Select from './Select';
+import Input from './Input';
+import Result from './Result';
+
+// 부모 컴포넌트
+export const PraticeEvent = () => {
+    // #1. 초기값 설정
+    const [data, setData] = useState({
+        fruit: 'apple',
+        background: 'black',
+        color: 'white',
+        content: 'text',
+    });
+
+    return (
+        <>
+            {/* props를 넘겨줄건데, setData 함수를 넘겨줘야 state 변경이 가능 */}
+            <div>
+                <Select setData={setData}></Select>
+            </div>
+            <div>
+                <Input setData={setData}></Input>
+            </div>
+            <div>
+                <Result data={data}></Result>
+            </div>
+        </>
+    );
+};

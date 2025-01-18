@@ -1,0 +1,147 @@
+// 실습1
+// .larva {
+//     position: relative;
+
+//     .body {
+//         width: 100px;
+//         height: 100px;
+//         border-radius: 50%;
+//         position: absolute;
+
+//         &.body1 {
+//             top: 100px;
+//             left: 100px;
+//             background-color: rgb(0, 0, 166);
+//             z-index: 6;
+//         }
+
+//         &.body2 {
+//             top: 150px;
+//             left: 160px;
+//             background-color: rgb(36, 61, 206);
+//             z-index: 7;
+//         }
+
+//         &.body3 {
+//             top: 190px;
+//             left: 200px;
+//             background-color: rgb(52, 118, 231);
+//             z-index: 8;
+//         }
+
+//         &.body4 {
+//             top: 240px;
+//             left: 220px;
+//             background-color: rgb(47, 146, 233);
+//             z-index: 9;
+//         }
+
+//         &.body5 {
+//             top: 280px;
+//             left: 280px;
+//             background-color: rgb(140, 191, 253);
+//             z-index: 10;
+//         }
+//     }
+//     .grass {
+//         position: absolute;
+//         top: 260px;
+//         left: 0;
+//     }
+// }
+
+// 실습2
+// $color-first: pink;
+// $color-second: yellow;
+// $color-third: green;
+
+// @mixin rotate($number) {
+//     @keyframes animation#{$number} {
+//         0%,
+//         100% {
+//             transform: translate(0, 0);
+//         }
+//         25% {
+//             transform: translate($number, 0);
+//         }
+//         50% {
+//             transform: translate($number, $number);
+//         }
+//         75% {
+//             transform: translate(0, $number);
+//         }
+//     }
+//     animation: animation#{$number} 2s infinite;
+// }
+
+// .container {
+//     width: 500px;
+//     height: 500px;
+//     border: 1px solid black;
+
+//     display: flex;
+//     flex-direction: column;
+
+//     .circle {
+//         width: 50px;
+//         height: 50px;
+//         border-radius: 50%;
+
+//         &.first {
+//             background-color: $color-first;
+//             @include rotate(10px);
+//         }
+//         &.second {
+//             background-color: $color-second;
+//             @include rotate(20px);
+//         }
+//         &.third {
+//             background-color: $color-third;
+//             @include rotate(30px);
+//         }
+//     }
+// }
+
+// 실습3
+$h1color: white;
+$background: rgba(49, 147, 237, 0.852);
+$numbercolor: blue;
+$titlecolor: gray;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    h1 {
+        background-color: $background;
+        color: $h1color;
+        text-align: center;
+    }
+
+    .content {
+        background-color: rgba(208, 226, 246, 0.541);
+        border-radius: 10px;
+        box-shadow: gray;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 500px;
+
+        .numberTitle {
+            .number {
+                color: $numbercolor;
+                font-size: 14px;
+            }
+
+            .title {
+                color: $titlecolor;
+                font-size: 14px;
+            }
+        }
+
+        .body {
+            font-weight: 500;
+        }
+    }
+}

@@ -9,14 +9,14 @@
 //     ]);
 
 //     const saveInfo = () => {
-// const newPersonalInfo = personalInfo.concat({
-//     nameInfo: inputName,
-//     emailInfo: inputEmail,
-// });
+//         const newPersonalInfo = personalInfo.concat({
+//             nameInfo: inputName,
+//             emailInfo: inputEmail,
+//         });
 
-// setPersonalInfo(newPersonalInfo);
-// setInputName('');
-// setInputEmail('');
+//         setPersonalInfo(newPersonalInfo);
+//         setInputName('');
+//         setInputEmail('');
 //     };
 
 //     const handleEnter = (e) => {
@@ -79,6 +79,7 @@ export const PracticeMapFilter = () => {
     const [searchPosts, setSearchPosts] = useState([]);
     const [searchTitle, setSearchTitle] = useState('검색 결과가 없습니다.');
     const [inputSearch, setInputSearch] = useState('');
+
     const [show, setShow] = useState('none');
     const [option, setOption] = useState('writer');
 
@@ -97,18 +98,12 @@ export const PracticeMapFilter = () => {
     };
 
     const searchPostsFunction = () => {
-        if (option === 'writer') {
-            const newSearchPosts = searchPosts.filter((post) =>
-                post.writer.includes(inputSearch)
-            );
-            setSearchPosts(newSearchPosts);
-        }
-        if (option === 'title') {
-            const newSearchPosts = searchPosts.filter((post) =>
-                post.title.includes(inputSearch)
-            );
-            setSearchPosts(newSearchPosts);
-        }
+        const newSearchPosts = searchPosts.filter((post) => {
+            option === 'writer'
+                ? post.writer.includes(inputSearch)
+                : post.title.includes(inputSearch);
+        });
+        setSearchPosts(newSearchPosts);
         setSearchTitle('검색결과');
         setShow('block');
     };

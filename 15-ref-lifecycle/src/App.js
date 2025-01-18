@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import LifeCycleClass from './LifeCycleClass';
 import LifeCycleFunction from './LifeCycleFunction';
 import { PracticeLifeCycle } from './PracticeLifeCycle';
@@ -22,11 +22,11 @@ function App() {
             {/* <PracticeRef></PracticeRef> */}
 
             {/* lifecycle */}
-            <LifeCycleClass></LifeCycleClass>
+            {/* <LifeCycleClass></LifeCycleClass> */}
             {/* <LifeCycleFunction></LifeCycleFunction> */}
 
             {/* 실습 */}
-            {/* <PracticeLifeCycle></PracticeLifeCycle> */}
+            <PracticeLifeCycle></PracticeLifeCycle>
         </div>
     );
 }

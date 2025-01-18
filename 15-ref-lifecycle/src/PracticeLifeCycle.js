@@ -12,6 +12,7 @@
 // };
 
 // 실습2
+
 import React, { useState } from 'react';
 import { PracticePostList } from './PracticePostList';
 

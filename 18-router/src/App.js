@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import ProductPage from './pages/ProductPage';
 import Header from './components/Header';
+import ProductDetailPage from './pages/ProductDetailPage';
+import NotFound from './pages/NotFound';
 
 function App() {
     return (
@@ -12,8 +14,16 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<MainPage />}></Route>
-                    {/* /: 기본 경로로 이동 하겠다. */}
                     <Route path="/products" element={<ProductPage />}></Route>
+                    <Route
+                        // 동적 라우트 설정
+                        // - 경로에 콜론(:) 사용 // 콜론 다음의 값을 동적인 값으로 인식함.
+                        path="/products/:productId"
+                        element={<ProductDetailPage />}
+                    ></Route>
+                    <Route path="*" element={<NotFound />}></Route>
+                    {/* 우리가 지정한 경로 말고 모든 경로를 이쪽으로 받겠다 */}
+                    {/* React router는 위에서 아래로 경로를 매칭 -> 와일드카드 경로가 위에 배치 시 모든 경로를 덮어 씌움 -> 와일드카드 경로는 항상 마지막에 배치 */}
                 </Routes>
             </BrowserRouter>
         </>

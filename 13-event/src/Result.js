@@ -1,33 +1,33 @@
-import React from 'react';
-import apple from './assets/apple.png';
-import banana from './assets/banana.png';
-import peach from './assets/peach.png';
+// import React from 'react';
+// import apple from './assets/apple.png';
+// import banana from './assets/banana.png';
+// import peach from './assets/peach.png';
 // imiport로 가져왔다는 것은 모듈로 가져오고 모듈로 처리하겠다.
 
 // #1.(정적) import 방식으로 가져와서 객체에 저장.
 // - 파일이나 모듈을 컴파일 시점에 미리 가져옴.
 // - 파일 경로가 고정되어 있어야 함.
-const images = {
-    apple,
-    banana,
-    peach,
-};
+// const images = {
+//     apple,
+//     banana,
+//     peach,
+// };
 
-export default function Result({ data }) {
-    const { fruit, background, color, content } = data;
+// export default function Result({ data }) {
+//     const { fruit, background, color, content } = data;
 
-    return (
-        <div>
-            {/* fruit 변수는 문자열을 가지고 오는 것 */}
-            {/* images[fruit]로 가져오면 변수로 가져 올 수 있음 */}
-            <img src={images[fruit]} alt="" width={200} height={200} />
-            {/* 그냥 src={fruit}는 문자열 값일 뿐 브라우저가 이해할 수 있는 이미지 파일 경로가 아님, import한 변수가 될 수 없다. */}
-            <div style={{ backgroundColor: background, color: color }}>
-                {content}
-            </div>
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             {/* fruit 변수는 문자열을 가지고 오는 것 */}
+//             {/* images[fruit]로 가져오면 변수로 가져 올 수 있음 */}
+//             <img src={images[fruit]} alt="" width={200} height={200} />
+//             {/* 그냥 src={fruit}는 문자열 값일 뿐 브라우저가 이해할 수 있는 이미지 파일 경로가 아님, import한 변수가 될 수 없다. */}
+//             <div style={{ backgroundColor: background, color: color }}>
+//                 {content}
+//             </div>
+//         </div>
+//     );
+// }
 
 // public 폴더는 빌드를 하지 않기 때문에, 빌드를 시킬 것들은 src 폴더에 넣어야 한다.
 // public 폴더에 이미지 파일이 많아지면 로딩이 느려지겠죠...?
@@ -70,9 +70,9 @@ export default function Result({ data }) {
  *
  */
 
-// import React from 'react';
+import React from 'react';
 
-// const images = require.context('./assets', false, /\.(png|jpe?g|svg)$/);
+const images = require.context('./assets', false, /\.(png|jpe?g|svg)$/);
 /**
  * . : 임의의 한 특수문자.
  * \. : .을 일반 문자로 취급하게 해서 실제 점(.)을 찾음.
@@ -80,23 +80,23 @@ export default function Result({ data }) {
  * $ : 문자열의 끝을 의미. -> 끝에 .png로 끝나야만 매칭.
  * | : or
  */
-// console.log('images', images);
-// console.log('모든 파일 경로를 배열로 반환', images.keys());
+console.log('images', images);
+console.log('모든 파일 경로를 배열로 반환', images.keys());
 
-// export default function Result({ data }) {
-//     const { fruit, background, color, content } = data;
-//     return (
-//         <div>
-//             <img
-//                 src={images(`./${fruit}.png`)}
-//                 alt=""
-//                 width={200}
-//                 height={200}
-//                 // 리액트에서는 단위를 적어주지 않으면 px로 처리.
-//             />
-//             <div style={{ backgroundColor: background, color: color }}>
-//                 {content}
-//             </div>
-//         </div>
-//     );
-// }
+export default function Result({ data }) {
+    const { fruit, background, color, content } = data;
+    return (
+        <div>
+            <img
+                src={images(`./${fruit}.png`)}
+                alt=""
+                width={200}
+                height={200}
+                // 리액트에서는 단위를 적어주지 않으면 px로 처리.
+            />
+            <div style={{ backgroundColor: background, color: color }}>
+                {content}
+            </div>
+        </div>
+    );
+}

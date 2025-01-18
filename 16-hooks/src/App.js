@@ -18,7 +18,7 @@ import UserNameContext from './context/UserNameContext';
 import useTitle from './hooks/useTitle';
 
 function App() {
-    useTitle('React Hooks 학습중!');
+    // useTitle('React Hooks 학습중!');
     return (
         <div className="App">
             {/* <UseMemoEx></UseMemoEx> */}
@@ -29,7 +29,7 @@ function App() {
                 <ThemeMiddle></ThemeMiddle>
                 <ThemeMiddle></ThemeMiddle>
             </ThemeProvider> */}
-            <Faq></Faq>
+            {/* <Faq></Faq> */}
 
             {/* 실습 */}
             {/* <ProductFilter></ProductFilter> */}
@@ -41,7 +41,7 @@ function App() {
             </UserNameProvider> */}
 
             {/* React Hook Form */}
-            {/* <Form></Form> */}
+            <Form></Form>
             {/* <PracticeForm></PracticeForm> */}
         </div>
     );
