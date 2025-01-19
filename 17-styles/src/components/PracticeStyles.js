@@ -1,6 +1,6 @@
 // 실습1
 // import React from 'react';
-// import '../styles/_practiceStyles.scss';
+// import '../styles/PracticeStyles.scss';
 
 // export default function PracticeStyles() {
 //     return (
@@ -25,7 +25,7 @@
 
 // 실습2
 import React from 'react';
-import '../styles/_practiceStyles.scss';
+import '../styles/PracticeStyles.scss';
 
 export default function PracticeStyles() {
     return (

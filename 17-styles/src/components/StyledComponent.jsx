@@ -50,7 +50,7 @@ const Button = styled.button`
 
     &:hover {
         background-color: ${(props) =>
-            props.primary ? 'darkblue' : 'darkgray'};
+            props.primary ? 'darkblue' : 'darkgray'}; /* props 사용 */
     }
 `;
 
@@ -85,7 +85,7 @@ export default function StyledComponent() {
                 <StyledBox bgColor="yellow">3</StyledBox>
                 <StyledBox>4</StyledBox>
             </StyledContainer>
-            <Button primary>Click!</Button>
+            <Button primary>Click!</Button> {/* primary 라는 props 제공 */}
             <Button>Click!</Button>
             <AniDiv>애니메이션</AniDiv>
         </>

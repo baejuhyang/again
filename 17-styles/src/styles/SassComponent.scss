@@ -2,7 +2,7 @@
 // - 해당 파일이 특정 react 컴포넌트와 밀접하게 연관된다는 것을 나타냄
 // - 보통 컴포넌트마다 작성되고, 컴포넌트 이름과 파일 이름을 작성함.
 
-// CSS wjscjflrk wndy rlsmd
+// Sass styling
 // #1. 변수
 // $color-first: red;
 // $color-second: orange;
@@ -14,7 +14,7 @@
 @import './variables';
 // 언더바 표시 해줬던 애들을 먼저 우선적으로 찾음. 파일을 가져올 때 언더바 입력해주지 않아도 된다.
 
-// #4. 믹스인(함수) 선언(정의)
+// // #4. 믹스인(함수) 선언(정의)
 // @mixin box($size) {
 //     width: $size;
 //     height: $size;
@@ -22,7 +22,7 @@
 // import로 가져오는 방법이 있음
 @import './utils';
 
-// #4-3. 믹스인 - 여러개의 인자자
+// #4-3. 믹스인 - 여러개의 인자
 @mixin text-style($color, $font-size, $font-weight) {
     color: $color;
     font-size: $font-size;

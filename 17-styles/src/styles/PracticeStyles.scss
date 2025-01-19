@@ -51,56 +51,56 @@
 // }
 
 // 실습2
-// $color-first: pink;
-// $color-second: yellow;
-// $color-third: green;
+$color-first: pink;
+$color-second: yellow;
+$color-third: green;
 
-// @mixin rotate($number) {
-//     @keyframes animation#{$number} {
-//         0%,
-//         100% {
-//             transform: translate(0, 0);
-//         }
-//         25% {
-//             transform: translate($number, 0);
-//         }
-//         50% {
-//             transform: translate($number, $number);
-//         }
-//         75% {
-//             transform: translate(0, $number);
-//         }
-//     }
-//     animation: animation#{$number} 2s infinite;
-// }
+@mixin rotate($number) {
+    @keyframes animation#{$number} {
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate($number, 0);
+        }
+        50% {
+            transform: translate($number, $number);
+        }
+        75% {
+            transform: translate(0, $number);
+        }
+    }
+    animation: animation#{$number} 2s infinite;
+}
 
-// .container {
-//     width: 500px;
-//     height: 500px;
-//     border: 1px solid black;
+.container {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
 
-//     display: flex;
-//     flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-//     .circle {
-//         width: 50px;
-//         height: 50px;
-//         border-radius: 50%;
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
 
-//         &.first {
-//             background-color: $color-first;
-//             @include rotate(10px);
-//         }
-//         &.second {
-//             background-color: $color-second;
-//             @include rotate(20px);
-//         }
-//         &.third {
-//             background-color: $color-third;
-//             @include rotate(30px);
-//         }
-//     }
-// }
+        &.first {
+            background-color: $color-first;
+            @include rotate(10px);
+        }
+        &.second {
+            background-color: $color-second;
+            @include rotate(20px);
+        }
+        &.third {
+            background-color: $color-third;
+            @include rotate(30px);
+        }
+    }
+}
 
 // 실습3
 $h1color: white;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PracticePostList } from './PracticePostList';
-import '../../styles/_practiceStyles.scss';
+import '../../styles/PracticeStyles.scss';
 
 export const PracticeLifeCycle = () => {
     return (

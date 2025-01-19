@@ -10,12 +10,12 @@ function App() {
     return (
         <div className="App">
             {/* <BasicCss></BasicCss> */}
-            <CssModuleComponents></CssModuleComponents>
-            {/* <SassComponent></SassComponent>
-            <StyledComponent></StyledComponent> */}
+            {/* <CssModuleComponents></CssModuleComponents> */}
+            {/* <SassComponent></SassComponent> */}
+            {/* <StyledComponent></StyledComponent> */}
 
             {/* 실습 */}
-            {/* <PracticeStyles></PracticeStyles> */}
+            <PracticeStyles></PracticeStyles>
             {/* <PracticeLifeCycle></PracticeLifeCycle> */}
         </div>
     );
