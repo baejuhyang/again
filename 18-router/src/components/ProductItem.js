@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ProductItem({ product }) {
-    const { id, name, email, body } = product;
+    const { id, name, body } = product;
     return (
         <div>
             <Link to={`/products/${id}`}>

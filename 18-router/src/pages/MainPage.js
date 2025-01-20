@@ -25,9 +25,10 @@ export default function MainPage() {
     const mode = searchParams.get('mode');
     // 테마 토글 함수
     const toggleMode = () => {
-        const currentMode = searchParams.get('mode');
+        // const currentMode = searchParams.get('mode');
         setSearchParams({
-            mode: currentMode === 'Dark' ? 'Light' : 'Dark',
+            // mode: currentMode === 'Dark' ? 'Light' : 'Dark',
+            mode: mode === 'Dark' ? 'Light' : 'Dark',
         });
     };
 

@@ -75,7 +75,7 @@ export const productInfos = [
 ];
 
 export default function ProductList() {
-    console.log(productInfos);
+    // console.log(productInfos);
 
     return (
         <div>

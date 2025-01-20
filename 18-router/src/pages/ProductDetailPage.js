@@ -10,11 +10,11 @@ export default function ProductDetailPage() {
     // - 다중 파라미터는 객체 형태로 반환.
     // - 항상 '문자열'로 반환.
 
-    console.log('상품 Data: ', productInfos);
+    // console.log('상품 Data: ', productInfos);
     const targetProduct = productInfos[Number(productId) - 1];
     // 타겟한 상품이랑 인텍스 번호를 일치 시키는 과정
     // 숫자 값으로 처리하기 위해 형변환!
-    console.log(targetProduct);
+    // console.log(targetProduct);
     const { id, name, email, body } = targetProduct;
 
     // return (
