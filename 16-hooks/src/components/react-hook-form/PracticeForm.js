@@ -25,15 +25,21 @@ export default function PracticeForm() {
                     required: '이름은 필수 항목입니다.',
                 })}
             />
+            {errors.username && (
+                <div style={{ color: 'red' }}>{errors.username.message}</div>
+            )}
             <br />
             <input
                 type="text"
                 placeholder="나이"
                 {...register('age', {
                     validate: (value) =>
-                        value > 0 || '0 이상의 숫자만 입력 가능합니다.',
+                        Number(value) > 0 || '0 이상의 숫자만 입력 가능합니다.',
                 })}
             />
+            {errors.age && (
+                <div style={{ color: 'red' }}>{errors.age.message}</div>
+            )}
             <br />
             <button type="submit">제출</button>
         </form>

@@ -12,7 +12,7 @@ export default function UseToolkit() {
             <h1>UseToolkit</h1>
             <h2>리듀서 추가!</h2>
             <h2>number: {count}</h2>
-            <Box1></Box1>
+            <Box1 />
         </div>
     );
 }
@@ -51,18 +51,16 @@ const Box3 = () => {
 const Box4 = () => {
     const count = useSelector((state) => state.counter.count);
     const isVisible = useSelector((state) => state.isVisible);
-    console.log(isVisible);
 
     // #5. 액션 함수 실행
     const dispatch = useDispatch();
     return (
         <div className="Box4">
             <h2>Box4 : {count}</h2>
-            <h2>isVisible 값은 "{isVisible ? '참' : '거짓'}" 이다.</h2>
-
             <button onClick={() => dispatch(plus())}>PLUS</button>
             <button onClick={() => dispatch(minus())}>Minus</button>
             <button onClick={() => dispatch(amount())}> AMOUNT</button>
+            <h2>isVisible 값은 "{isVisible ? '참' : '거짓'}" 이다.</h2>
             <button onClick={() => dispatch(change())}>CHANGE</button>
         </div>
     );

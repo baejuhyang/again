@@ -153,6 +153,7 @@ import UserNameContext from '../context/UserNameContext';
 //     const [state, dispatch] = useReducer(reducer, initState);
 
 //     const handleCreate = () => {
+//         if (input.trim() === '') return;
 //         setInput('');
 //         dispatch({ type: 'HANDLECREAT', playload: input });
 //     };
