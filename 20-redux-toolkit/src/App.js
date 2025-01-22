@@ -1,9 +1,11 @@
+import PracticeRedux from './PracticeRedux';
 import UseToolkit from './UseToolkit';
 
 function App() {
     return (
         <div className="App">
-            <UseToolkit></UseToolkit>
+            {/* <UseToolkit></UseToolkit> */}
+            <PracticeRedux></PracticeRedux>
         </div>
     );
 }

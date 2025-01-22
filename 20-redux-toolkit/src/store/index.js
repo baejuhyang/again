@@ -3,7 +3,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSilce';
 import isVisibleReducer from './isVisibleSlice';
-
+import calculateReducer from './calculateSlice';
 // # configureStore
 // - store 생성
 // - 여러 리듀서 결합 (reducer 옵션으로 전달)
@@ -13,6 +13,7 @@ const store = configureStore({
         // reducer 옵션으로 전달
         counter: counterReducer, // "counter" 라는 상태를 counterReducer로 관리. // 변수명 마음대로
         isVisible: isVisibleReducer,
+        calculate: calculateReducer,
     },
 });
 export default store;
