@@ -5,7 +5,7 @@ import '../styles/TodoList.scss';
 // #2. TodoItem 작성 (초안 작성)
 
 // TodoItem의 Props 타입 정의
-// {}=>{todo: id, text, completed}
+// {todo} => {todo: id, text, completed}
 interface TodoItemProps {
     todo: ToDoItem;
     toggleComplete(id: number): void;

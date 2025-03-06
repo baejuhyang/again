@@ -205,21 +205,26 @@ const first: Team = {
     age: 30,
     exp: true,
     position: 'FrontEnd',
-    1: Score.Aplus, // '1': 'A+' // [grade: number]: Score;
+    1: Score.Aplus, // '1': 'A+' // 로 출력됨
+    // 숫자 키가 문자열로 변환되는 이유 -> js에서 객체의 키는 기본적으로 문자열로 저장
+    // 키가 숫자로 작성되었더라도 내부적으로는 문자열로 변환
 };
-console.log(first);
+console.log('first', first);
+// 키가 문자열로 변환되었지만, 객체 접근 방식에서는 number 키를 사용할 수 있다.
+console.log(first[1]); // 'A+'
+console.log(first['1']); // 'A+'
 
 // [grade: number]: Score;
 // 인덱스 시그니처
 // - 객체의 키와 값의 타입을 동적으로 정의.
 // - 객체의 속성이 사전에 정해져 있지 않고, 임의의 키로 접근할 수 있도록 허용할 때 사용.
 // = 객체가 어떤 키로든 접근할 수 있도록 허용하고, 키와 그에 대응하는 값의 타입을 정의 할 수 있는 방법을 제공.
-//
+
 // 구문
 // interface 인터페이스명 {
 //      [key: 키의 타입]: 값의 타입;
 // }
-//
+
 // [grade: number] - (숫자)인 키.
 // [grade: number]: string; - (숫자)인 키를 가진 객체가 (문자열) 값을 가질 것임을 명시.
 // Ex) 1: 'Great'
@@ -248,7 +253,7 @@ console.log(mon2);
 // type - 복잡한 타입을 정의하고, 코드에서 타입을 재사용하고 가독성을 높이기 위해 사용.
 // enum - 값들의 집합을 정의하고, 이를 상수처럼 사용하기 위해 사용.
 
-// 교차 타입: 두 개 이상의 타일을 합쳐서 하나의 객체가 모든 속성을 포함하도록 만듦.
+// 교차 타입: 두 개 이상의 타입을 합쳐서 하나의 객체가 모든 속성을 포함하도록 만듦.
 interface Toy {
     name: string;
     start(): void;

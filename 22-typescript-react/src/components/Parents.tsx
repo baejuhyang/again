@@ -21,7 +21,7 @@ export default function Parents() {
                 name={studentData.name}
                 age={studentData.age}
                 major={studentData.major}
-            ></Student> */}
+            /> */}
 
             {/* 방법2 */}
             <Student data={studentData} handleClick={handleClick}>

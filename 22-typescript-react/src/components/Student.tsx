@@ -1,7 +1,7 @@
 import React from 'react';
 
-// # interface 사용한 props 타입 정의
-// 학생 데이터를 위한 인터페이스
+// // # interface 사용한 props 타입 정의
+// // 학생 데이터를 위한 인터페이스
 // interface StudentData {
 //     name: string;
 //     age: number;
@@ -19,7 +19,7 @@ import React from 'react';
 //     );
 // }
 
-// 2번째 방법법
+// 2번째 방법
 interface StudentData {
     name: string;
     age: number;

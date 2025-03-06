@@ -1,16 +1,16 @@
 // PostItem 컴포넌트입니다.
 
-interface Props {
-    key: number;
-    post: Post;
-}
-
 export type Post = {
     userid: number;
     id: number;
     title: string;
     body: string;
 };
+
+interface Props {
+    key: number;
+    post: Post;
+}
 
 const PostItem = ({ post }: Props) => {
     return (

@@ -11,10 +11,10 @@ function App() {
                 <p>Ts with React</p>
             </First> */}
             {/* <Parents></Parents> */}
-            {/* <TodoList></TodoList> */}
+            <TodoList></TodoList>
 
             {/* 실습 */}
-            <PostList></PostList>
+            {/* <PostList></PostList> */}
         </div>
     );
 }
